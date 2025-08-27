@@ -1,0 +1,97 @@
+
+:root{
+    --card-bg-color: white; /* set background color */
+    --radius: 18px; /* set radius for curved corner */
+}
+
+.work-container{ padding: 2.5rem; background: white; color: black; }
+
+.work-inner-container { width: 90%; margin: 0 auto; }
+
+.work-main-title{
+    margin: 0 0 1.25rem; line-height: 1.1;
+    font-size: 3rem; font-family: Monospace, sans-serif;
+}
+
+/* Consistent/Generic CSS for all Work Cards */
+.work-card{
+    background: var(--card-bg-color);
+    border: none; border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
+    padding: 1.5rem 2rem; margin: 2.5rem 1rem;
+    line-height: 1.25;
+    font-family: Monospace, sans-serif; font-size: 1.1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Unique hover animation for all work cards */
+.work-card:hover { transform: scale(1.015); cursor: pointer; }
+
+/* Unique CSS for company emblems */
+.work-card-img { border-radius: 20%; }
+
+
+/* -------- DOJ Card -------- */
+/* sets flex-layout(row-like structure) for items:(img) and (header) */
+.doj-card-header { display: flex; align-items: center; gap: 1rem; }
+
+/* sets DOJ Title to be readable size */
+.doj-title { font-size: 1.35rem; margin:0; }
+
+
+/* -------- CodePath Card -------- */
+/* sets flex-layout(row-like structure) for items:(img) and (header) */
+.codepath-card-header { display: flex; align-items: center; gap: 1rem; }
+
+/* sets title to readable space and size */
+.codepath-title { font-size: 1.4rem; margin:0; }
+
+/* line serves as pointer between job positions */
+.vert-line::before {
+    content: ""; /* empty can be used to define what is rendered inside an element or pseudo-element */
+    /* sets to block element and sets space on the left */
+    display: block; margin-left: 1rem;
+    /* creates semi-tall thin gray line */
+    height: 55px; width: 1px; background-color: #c2c2c2;
+}
+
+
+/* -------- Resilience Inc. Card -------- */
+/* sets flex-layout(row-like structure) for items:(img) and (header) */
+.resilience-card-header { display: flex; align-items: center; gap: 1rem; }
+
+/* sets title to readable space and size */
+.resilience-title { font-size: 1.4rem; margin:0; }
+
+
+/* -------- HeadStarter Card -------- */
+/* sets flex-layout(row-like structure) for items:(img) and (header) */
+.headstart-card-header { display: flex; align-items: center; gap: 1rem; }
+
+/* sets title to readable space and size */
+.headstart-title { font-size: 1.4rem; margin:0; }
+
+
+/* -------- AI4ALL Card -------- */
+/* sets flex-layout(row-like structure) for items:(img) and (header) */
+.ai-card-header { display: flex; align-items: center; gap: 1rem; }
+
+/* sets title to readable space and size */
+.ai-title { font-size: 1.4rem; margin:0; }
+
+
+/* -------- Apple Card -------- */
+/* sets flex-layout(row-like structure) for items:(img) and (header) */
+.apple-card-header { display: flex; align-items: center; gap: 1rem; }
+
+/* sets title to readable space and size */
+.apple-title { font-size: 1.4rem; margin:0; }
+
+
+/* Responsive CSS */
+@media (width < 900px) {
+    .about-cards-grid {
+        grid-template-columns:1fr;
+        margin: 2rem 0;
+    }
+}

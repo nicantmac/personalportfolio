@@ -1,0 +1,161 @@
+:root { --text-border-color: lightgray; --text-bg-color: #f5f5f5; --border-radius: 20px; }
+
+/* ===== Projects Section Container ===== */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: white;
+    /* optional max width framing */
+    box-sizing: border-box;
+}
+
+/* ===== Inner Grid (2 × 2) ===== */
+.projects-inner-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 2fr);
+    width: 85%;
+    max-width: 1200px;          /* tweak if you want wider/narrower */
+    margin: 0 auto;
+}
+
+/* Title spans full grid width */
+.projects-main-title {
+    grid-column: 1 / -1;
+    margin: 0.5rem;
+    color: black;
+    font-size: 3rem; font-family: Monospace, sans-serif;
+    line-height: 1.15;
+}
+
+/* ===== Cards in Grid ===== */
+/* Target only the cards inside this grid (keeps overrides precise) */
+.project-card {
+    background: #fff;
+    border-radius: 20px;
+    /*width: auto;*/
+    /*height: auto;*/
+
+    display: flex;
+    flex-direction: column;     /* image on top, text below */
+    padding: 1.25rem;
+    border: 1px solid lightgray;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: auto;
+}
+
+.projects-inner-container > .project-grid.project-card:hover {
+    transform: translateY(-5px) scale(1.015);
+    box-shadow: 0 24px 50px rgba(0,0,0,0.18);
+}
+
+/* Card image fills width with a nice aspect ratio */
+.projects-inner-container > .project-grid.project-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;      /* keeps consistent height across cards */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Text block */
+.project-card-subtext {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Subtitle / Title inside card */
+.project-card-subtitle,
+.project-card-title {
+    font-size: 1.35rem;
+    font-family: Monospace, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+/* Pill-ish meta text lines */
+.project-card-text {
+    font-size: 1rem;
+    font-family: Monospace, sans-serif;
+    color: black;
+    padding: 0.75rem 0.9rem;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    display: inline-block;
+    line-height: 1.4;
+    margin: 0.25rem 0;
+}
+
+/* Small label text (if used elsewhere) */
+.text-sm {
+    color: #fff;
+    font-size: 1.05rem;
+    font-family: Monospace, sans-serif;
+    font-weight: 500;
+}
+
+/* Optional controls (kept if you still show buttons somewhere) */
+.btn-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn-handle {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-handle:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+/*@media (max-width: 1024px) {*/
+/*    .projects-inner-container {*/
+/*        gap: 2rem;*/
+/*    }*/
+/*    .project-card-subtitle,*/
+/*    .project-card-title {*/
+/*        font-size: 1.25rem;*/
+/*    }*/
+/*}*/
+
+@media (max-width: 768px) {
+    /* Stack to 1 column on small screens */
+    .projects-inner-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
+        padding: 1.25rem;
+    }
+
+    .projects-inner-container > .project-grid.project-card {
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .projects-inner-container > .project-grid.project-card img {
+        border-radius: 12px;
+    }
+}
+
+/* If you literally want to cap at exactly 2×2 visible items, uncomment:
+.projects-inner-container > .project-grid.project-card:nth-of-type(n + 5) { display: none; }
+*/

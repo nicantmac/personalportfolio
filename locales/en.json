@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "journey": "journey",
+    "experience": "experience",
+    "projects": "projects",
+    "contact": "contact me"
+  },
+  "hero": {
+    "title": "Hello",
+    "name": "I am Nick",
+    "subtitle": "Aspiring Full-Stack Dev"
+  },
+  "hero-btn" : {
+    "resume": "Resume",
+    "talk": "Let's Talk",
+    "explore": "Explore"
+  }
+}

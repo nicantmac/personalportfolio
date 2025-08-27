@@ -1,0 +1,134 @@
+/* Root variables keep consistent features */
+:root {
+    /* Button Background Color, Button Background Hovering Color */
+    --bg-btn-color: #f0f0f0; --bg-btn-color-hover: #e7e7e7;
+}
+
+.hero-container {
+    /* Ensures grid layout and minimal height is full-page height */
+    display: grid; min-height: 100vh;
+    place-items: center; /* shorthand for align-items & justify-content */
+    overflow: hidden; /* ensures user can't scroll x/y-axis */
+    /* Establishes positioning context for absolutely positioned children */
+    position: relative; padding: 2rem;
+    /* Creates a dotted pattern using a radial gradient with color(grayish blue) */
+    background-size: 70px 70px; background-image: radial-gradient(#b6bfc7 2px, transparent 3px);
+    z-index: 10; /* sets stacking order at lowest in comparison to other elements */
+}
+
+.hero-main {
+    /* Hero Title */
+    /* Enables positioning, centers text and spaces the content evenly */
+    position: relative; text-align: center; padding: 0.5rem; width: 60%;
+    /* Sets white background with curved corners */
+    background: white; border-radius: 6rem; font-family: Monospace, sans-serif;
+    letter-spacing: 0.08em; /* Sets small space in-between letters */
+}
+
+/* ----- Heading + Subtitle ----- */
+/* Ensures no extra spacing and readable font */
+.hero-intro { margin: 0; font-size: 5rem; font-weight: lighter; }
+
+
+.hero-name {
+    /* Creates spacing around and between letters for "I am Nick" */
+    margin: .15rem 0 1rem; letter-spacing: .06em;
+    font-size: 5rem; font-weight: lighter; /* readable font */
+}
+
+/* Spacing and readable font sizing for subtitle -> "Aspiring..." */
+.hero-subtitle { margin: 0 1rem; font-size: 2rem; color: black; }
+
+/* wave animation target inside .hero-intro */
+.hero-intro .wave {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave 2s ease-in-out infinite;
+}
+
+/* each position the hand wave executes */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg) scale(1.05); }
+    20% { transform: rotate(-14deg) scale(1.2); }
+    30% { transform: rotate(20deg) scale(1.1); }
+    40% { transform: rotate(-14deg); }
+    50% { transform: rotate(10deg); }
+    60%,100% { transform: rotate(0deg); }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .hero-intro .wave { animation: none; }
+}
+
+/* ---------- Buttons Row ---------- */
+.hero-buttons {
+    /* Sets flex-layout and flex-wrap for any potential overlapping */
+    display: flex; flex-wrap: wrap;
+    /* Spacing around and in-between buttons, centers horizontally */
+    margin: 1.2rem 0; gap: .75rem; justify-content: center;
+}
+
+/* targets buttons under entire Hero Title */
+.hero-buttons .hero-title-btns {
+    display: inline-flex; padding: 0.5rem 1rem; align-items: center;
+    gap: .5rem; height: auto; width: auto;
+    font-size: 0.85rem; font-weight: lighter; font-family: Monospace, sans-serif;
+    background-color: var(--bg-btn-color); border-radius: 25px; border: none; cursor: pointer;
+    text-decoration: none; color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover animation for buttons */
+.hero-buttons .hero-title-btns:hover { background-color: var(--bg-btn-color-hover); transform: translateY(-1px); }
+
+/* normalize inline icon sizes (override huge rems) */
+.hero-buttons .hero-title-btns img { display: inline-block; width: 20px; height: 20px; }
+
+
+/* ---------- Social Icons ---------- */
+.social-icons {
+    margin-top: 1.75rem; display: flex;
+    justify-content: center; gap: .9rem;
+}
+
+.icon {
+    width: 40px; height: 40px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    transition: transform .15s ease, filter .2s ease;
+}
+
+.icon:hover { transform: translateY(-1px); }
+
+/* plug your actual asset paths */
+.icon.linkedin { background-image: url('/styles/icons/svgs/linkedin.svg'); }
+.icon.github   { background-image: url('/styles/icons/svgs/github.svg'); }
+
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 640px) {
+    .hero-intro { font-size: 3.5rem; }
+    .hero-name { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.5rem; }
+    .hero-main { border-radius: 1.5rem; }
+    .hero-buttons .btn { padding: .65rem 1rem; }
+    .icon { width: 28px; height: 28px; }
+}
+
+
+/* ---------- Nice, soft card halo on large screens ---------- */
+@media (min-width: 900px) {
+    .hero-main::before {
+        content: "";
+        position: absolute;
+        inset: -16px;
+        border-radius: inherit;
+        background: radial-gradient(ellipse at top, rgba(255,255,255,0.45), transparent 60%);
+        z-index: -1;
+        pointer-events: none;
+    }
+}

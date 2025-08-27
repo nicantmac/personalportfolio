@@ -1,0 +1,127 @@
+/* Root variables for consistency */
+:root {
+    --bg-btn-color: #f0f0f0; /* Button Background Color */
+    --bg-btn-color-hover: #e7e7e7; /* Button Background Hovering Color */
+    --border-btn-color: lightgray; /* Border for Buttons */
+    --btn-radius: 50px; /* Curved borders for buttons */
+}
+
+/* Targets the Outer Parent container of the header */
+.header-outer-container {
+    /* Box-Sizing/left/right/top ensure full viewport width */
+    box-sizing: border-box; width: 100%; position: fixed;
+    top: 0; left: 0; right: 0; /* safer than only width for fixed bars */
+    /* Ensures colors and borders are neatly styled */
+    border-bottom: 1px #e7e7e7 solid; background: transparent;
+    /* Flex turns into row and aligns vertically/horizontally */
+    display: flex; justify-content: center; align-items: center;
+    z-index: 200; /* layering elements */
+}
+
+/* Targets the Inner Parent container of the header */
+.header-inner-container {
+    /* Ensures items in flex-layout and in row-like structure */
+    display: flex; flex-direction: row;
+    /* Creates frosted glass bg-color via (transparent) & (blur) edit */
+    backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.2); /* translucent */
+    /* Sets a fixed min-height, fills width on screen and aligns items x-axis/y-axis */
+    min-height: 3rem; width: 100%; align-items: center; justify-content: space-between;
+}
+
+/* Targets all child-buttons inside this parent*/
+.header-inner-container button {
+    height: 2rem; cursor: pointer;
+    background-color: var(--bg-btn-color);
+    border: 1px var(--border-btn-color) solid;
+    transition: all 0.18s ease-in-out; /* Ensures smooth transition */
+}
+
+/* General CSS applied for all Left Side Buttons */
+.navbar-left-side {
+    display: flex; /* Ensures flex-layout (row-like structure) */
+    gap: 0.5rem; padding: 0 1rem; /* 1rem space between items and pads content */
+}
+
+/* Sets spacing top/bottom and curved borders */
+.navbar-left-side button { margin: 0.25rem 0; width: 2rem; border-radius: var(--btn-radius); }
+
+/* General CSS applied for all Right Side Buttons */
+.navbar-right-side a {
+    /*Ensures relative spacing and visible font */
+    margin: 0.5rem; padding: 0.35rem 0.5rem; color: black;
+    /* ensures readable font size*/
+    font-family: Monospace, sans-serif; font-size: 0.85rem;
+    border-radius: var(--btn-radius); border: 1px solid var(--border-btn-color);
+    text-decoration: none; background-color: var(--bg-btn-color);
+}
+
+/* Hover CSS animation (Left-side buttons) */
+.navbar-left-side button:hover { background-color: var(--bg-btn-color-hover); }
+
+/* Hover CSS animation (Right-side buttons) */
+.navbar-right-side a:hover { background-color: var(--bg-btn-color-hover); transform : translateY(-1px); }
+
+/* Unique hover effect for Language button ONLY */
+.navbar-left-side .lang-btn:hover { background-color: var(--bg-btn-color-hover); }
+
+nav {
+    /* Positions absolute in a navigation dropdown ensures the dropdown
+     remains within the viewport and maintains proper alignment. */
+    position: absolute;
+    /* top: appears below the trigger element, left: sets light amount of space on left-side */
+    top: 125%; left: 5%;
+    padding: 0.5rem 1rem; /* Sets spacing from list items and the border */
+    /* Sets consistent modernize look to buttons */
+    background-color: #fff; border: 1px var(--border-btn-color) solid; border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* top/bottom - left/right - blur / color */
+    z-index: 300; /* ensures visibility by stacking */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* ensures smooth transitions */
+}
+
+ul {
+    /* Sets to flex-layout and row-like structure */
+    display: flex; flex-direction: column;
+    list-style: none; /* Removes bullet points in the list */
+    gap: 0.75rem; /* (rem): sets adjustable space between list items */
+
+    margin: 0; padding: 0;
+    /* margin & padding: set to zero is used to horizontally center elements within its container.
+    When applied, the browser automatically calculates the space all around, allowing them to
+    absorb any available horizontal space equally. The remaining space will be split between
+    the left and right margins, effectively centering the element.*/
+}
+
+.nav-lang-item img {
+    /* Sets curved modernize look */
+    border-radius: 10px; border: 1px #333333 solid;
+    width: 1.5rem; height: 1.5rem; /* Uses (rem) for responsiveness */
+    margin-right: 1rem; /* (rem): responsive spacing on the right */
+}
+
+.nav-lang-item button {
+    /* Sets flex-layout and aligns on x/y-axis */
+    display: flex; align-items: center; justify-content: center;
+    /* width/height/padding (rem): sets responsive sizing and spacing for each button */
+    width: 8rem; height: 3rem; padding: 0.5rem 0.75rem;
+    /* keeps consistent modernize look */
+    border: none; border-radius: 20px; background-color: var(--bg-btn-color);
+    font-size: 0.9rem; cursor: pointer; /* adjustable font size and cursor transitions to pointer */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* smooth animation transitions */
+}
+
+/* Consistent unique hover animation for nav buttons */
+.nav-lang-item button:hover { background-color: var(--bg-btn-color-hover); transform: scale(1.05); }
+
+
+/* Screens Under Desktops size */
+/* at 650px and below → these CSS edits will take effect */
+@media (width < 650px) {
+    .navbar-inner-container {
+        /* let it grow to 2 rows */
+        height: auto; min-height: 4rem;
+        padding: 0.75rem 1rem;
+    }
+    .navbar-left-side { display: flex; flex-direction: column; gap: 0; }
+    .navbar-right-side { display: grid; grid-template-columns: repeat(2, auto); margin: 0.5rem; }
+    .navbar-right-side button { margin: 0.35rem; }
+}

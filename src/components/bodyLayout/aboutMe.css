@@ -1,0 +1,203 @@
+/* Root variables for consistent color theme */
+:root{ --card-bg-color: white; --radius: 20px; }
+
+.about-container { background: white; color: black; }
+
+.about-inner-container { width: 90%; margin: 0 auto; align-items: center; }
+
+.about-main-title{
+    font-size: 3rem; font-family: Monospace, sans-serif;
+    margin: 0 0 1.25rem; line-height: 1.1;
+}
+
+/* Consistent/Generic CSS applied to Cards (saves space) */
+.about-card {
+    background-color: var(--card-bg-color);
+    border: none; border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
+    padding: 1.5rem 2rem; margin: 0 1rem;
+    font-family: Monospace, sans-serif;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Consistent hover animation applied to Cards */
+.about-card:hover { transform: scale(1.005); cursor: pointer; }
+
+/* unique spacing to cards: (Bio) and (Academia) */
+.bio-card, .academia-card { padding: 1.5rem 2rem; margin: 2.5rem 1rem; }
+
+/* increases lines height so words appear bigger */
+.about-text { line-height: 1.65rem; }
+
+
+/* -------- Bio Card -------- */
+/* applies flex-layout(row-like structure), centers alignment with spacing between  */
+.bio-card-header { display: flex; align-items: center; gap: 1rem; margin: 0 0 1.5rem; }
+
+/* sets readable font and spacing to Bio Title */
+.bio-title { font-size: 1.25rem; margin:0; }
+
+
+/* -------- Academia Card -------- */
+/* flex directs header items: (img) and (header) in column-like structure */
+.academia-card-header { flex-direction: column; align-items: center; }
+
+/* Sets flex-layout to header items:(Uni emblem) and (Uni title) */
+.academia-card-header { display: flex; flex-direction: row; gap: 2rem; }
+
+/* sets flex layout(row-like structure) to items:(Uni emblem) and (Uni title) and centers alignment */
+.academia-title { display: flex; align-items: center; }
+
+/* creates readable sizing and space to Uni title */
+.academia-card-title { font-size: 1rem; margin: 1rem; }
+
+.academia-attending-status {
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: space-between;
+    border: none; border-radius: 50px; background-color: #f0f0f0;
+    width: 11rem; height: 2rem; padding: 0 0.75rem; margin-bottom: 0.75rem;
+}
+
+.academia-attending-status span {
+    width: 1rem; height: 1rem;
+    background-color: limegreen; border: none; border-radius: 50%;
+    animation-name: pulse; animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.academia-attending-status p { font-size: 0.85rem; }
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 1; }
+    50% { transform: scale(0.9); opacity: 0.5; }
+    100% { transform: scale(0.8); opacity: 1; }
+}
+
+
+/* -------- Fun Facts Card -------- */
+/* sets flex-layout(row-like structure) for child-items: (imgs), (title), (text) */
+.funFacts-container { display: flex; flex-direction: row; }
+
+/* sets unique spacing for Fun Facts Card */
+.funFacts-inner-container { padding: 1.5rem 2rem; margin: 1.5rem 1rem; width: 100%; }
+
+/* sets flex-layout(row-like structure) for header items:(img) and (title)
+   Reminder: margin with 3 units: top - right/left - bottom */
+.funFacts-card-header { display: flex; align-items: center; gap: 1rem; margin: 0 0 1.5rem; }
+
+/* readable sizing and spacing for Fun Facts Title */
+.funFacts-title { font-size: 2rem; margin: 0; }
+
+.facts-grid {
+    /* sets flex-layout, directs items in column-like structure */
+    display: flex; flex-direction: column;
+    /* forms into side-by-side grid structure */
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.fact-item {
+    /* sets flex-layout(row-like structure) and centers alignment */
+    display: flex; align-items: center;
+    /* sets spacing and readable font size */
+    gap: 1rem; font-size: 0.75rem;
+}
+
+
+/* -------- Tech Stack Card -------- */
+/* sets unique spacing for Tech Stack Card */
+.techStack-card { padding: 1.5rem 2rem; margin: 0.5rem 1rem; }
+
+/* sets flex-layout(row-like structure) for items:(img) and (header) */
+.techStack-card-header { display: flex; align-items: center; gap: 1rem; }
+
+/* Targets Tech Stack Title to be readable */
+.techStack-title { font-size: 1.1rem; margin: 0; }
+
+.tech-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.tech-section {
+    background-color: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tech-title {
+    font-size: 1.5rem; color: #333;
+    margin: 20px 0;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tech-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 3rem;
+    width: 6rem;
+    /* padding with three units: top - right/left - bottom */
+    padding: 6px 20px 0;
+    border-radius: 25px;
+    border: 1px solid #dadada;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover { transform: translateY(-4px); }
+
+.tech-icon {
+    width: 22px; height: 22px;
+    object-fit: contain;
+    /*margin-bottom: 0.4rem;*/
+    border-radius: 4px;
+}
+
+.tech-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+}
+
+.rated-tool-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tech-front { display: flex;  gap: 0.5rem;
+align-items: center; justify-content: center;
+    position: relative; transition: all 0.08s ease-in-out;
+}
+
+/* hide the back by default */
+.tech-back { display: none; gap: 1rem; }
+
+/* swap on hover */
+.tech-card:hover .tech-front { opacity: 0; }
+.tech-card:hover .tech-back {
+    display: flex; flex-direction: row;
+    position: absolute; top: 8px;
+    align-items: center; justify-content: center;
+}
+
+/* Responsive CSS */
+@media (width < 768px) {
+    .funFacts-container {
+        grid-template-columns:1fr; margin: 2rem 0;
+        /*flex-direction: column;*/
+    }
+}
+
