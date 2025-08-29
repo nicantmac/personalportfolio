@@ -1,12 +1,28 @@
-# React + Vite
+# 🧑‍💻 Nick's Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A motion-rich, multilingual developer portfolio built with React and Vite. Designed to showcase my journey as an aspiring full-stack developer, with smooth animations, modular components, and clean design.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+👉 [View Site](https://nickcodes.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- React + Vite
+- CSS Modules
+- GSAP for animations
+- i18next for internationalization
+- React Router DOM
 
-## Expanding the ESLint configuration
+## 🎯 Features
+- Responsive layout
+- Language toggle (EN, ES, FR, DE)
+- Smooth scroll and section transitions
+- Modular component architecture
+- Custom SVG icons and assets
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Preview
+[![Portfolio Preview](assets/preview.png)](https://nickcodes.netlify.app)
+
+## 📦 Setup
+```bash
+npm install
+npm run dev
