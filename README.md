@@ -4,14 +4,11 @@ My developer portfolio built with React and Vite. It's the starter-pack to displ
 
 ## 🛠️ Tech Stack
 - React + Vite
-- GSAP for animations
+- GSAP animations
 - a11y (for web accessibility)
 - i18next (for internationalization)
 
-## 📸 Preview
-[![Portfolio Preview](assets/preview.png)](https://nickcodes.netlify.app)
-
-## 📦 Setup
-```bash
-npm install
-npm run dev
+<br>
+<p align="center">
+  <img src="/src/assets/portfolio-preview.png" alt="Nick's Portfolio Homepage" width="800"/>
+</p>
