@@ -182,9 +182,13 @@ align-items: center; justify-content: center;
 
 /* swap on hover */
 .tech-card:hover .tech-front { opacity: 0; }
+
 .tech-card:hover .tech-back {
+    /* sets flex-layout in row direction */
     display: flex; flex-direction: row;
-    position: absolute; top: 8px;
+    /* positions element to nearest parent and adds a bit of space above; (star icon) and (text rating) */
+    position: absolute; top: 4px;
+    /* centers on x/y-axis */
     align-items: center; justify-content: center;
 }
 
