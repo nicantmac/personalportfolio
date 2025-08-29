@@ -1,28 +1,14 @@
-# 🧑‍💻 Nick's Personal Portfolio
+# Personal Portfolio - 👉 [Visit Me](https://nickcodes.netlify.app)
 
-A motion-rich, multilingual developer portfolio built with React and Vite. Designed to showcase my journey as an aspiring full-stack developer, with smooth animations, modular components, and clean design.
-
-## 🚀 Live Demo
-👉 [View Site](https://nickcodes.netlify.app)
+My developer portfolio built with React and Vite. It's the starter-pack to display simple web dev skills in my journey as an aspiring full-stack developer. Going for a clean design, I enhanced UI with implemeting a11y and internationalization.
 
 ## 🛠️ Tech Stack
 - React + Vite
-- CSS Modules
-- GSAP for animations
-- i18next for internationalization
-- React Router DOM
+- GSAP animations
+- a11y (for web accessibility)
+- i18next (for internationalization)
 
-## 🎯 Features
-- Responsive layout
-- Language toggle (EN, ES, FR, DE)
-- Smooth scroll and section transitions
-- Modular component architecture
-- Custom SVG icons and assets
-
-## 📸 Preview
-[![Portfolio Preview](assets/preview.png)](https://nickcodes.netlify.app)
-
-## 📦 Setup
-```bash
-npm install
-npm run dev
+<br>
+<p align="center">
+  <img src="/src/assets/portfolio-preview.png" alt="Nick's Portfolio Homepage" width="800"/>
+</p>
