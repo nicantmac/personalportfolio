@@ -5,7 +5,7 @@
 
 .about-inner-container { width: 90%; margin: 0 auto; align-items: center; }
 
-.about-main-title{
+.about-main-title {
     font-size: 3rem; font-family: Monospace, sans-serif;
     margin: 0 0 1.25rem; line-height: 1.1;
 }
@@ -133,24 +133,21 @@
     margin: 20px 0;
 }
 
+/* layout focused CSS for each little card item */
 .tech-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    /* Sets flex-layout(row-like structure), wrap ensures containment inside box */
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    /* Centers items vertically and horizontally with even spacing */
+    align-items: center; justify-content: space-evenly;
 }
 
 .tech-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    height: 3rem;
-    width: 6rem;
+    /* Sets flex-layout and centers content x/y-axis with gap creating space */
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    height: 3rem; width: 6rem; /* Set sizing for rounded look */
     /* padding with three units: top - right/left - bottom */
     padding: 6px 20px 0;
-    border-radius: 25px;
-    border: 1px solid #dadada;
-    background-color: white;
+    border-radius: 25px; border: 1px solid #dadada; background-color: white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
@@ -165,10 +162,8 @@
 }
 
 .tech-label {
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-align: center;
-    color: black;
+    /* Sets readable font and centers text content */
+    font-size: 1rem; text-align: center; color: black;
 }
 
 .rated-tool-card:hover {
@@ -199,5 +194,14 @@ align-items: center; justify-content: center;
         grid-template-columns:1fr; margin: 2rem 0;
         /*flex-direction: column;*/
     }
+    /* Sets spacing around the Language and Tech Tools container */
+    .tech-stack { padding: 1rem; }
+
+    .tech-card {
+        /* Help each card item to fit content perfectly */
+        height: auto; width: auto;
+    }
+    /* decreases font once as screen meets this width */
+    .tech-label { font-size: 0.75rem; }
 }
 
