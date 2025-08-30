@@ -10,5 +10,5 @@ My developer portfolio built with React and Vite. It's the starter-pack to displ
 
 <br>
 <p align="center">
-  <img src="/src/assets/portfolio-preview.png" alt="Nick's Portfolio Homepage" width="800"/>
+  <img src="/src/assets/portfolio-preview.png" alt="Nick's Portfolio Homepage" width="1000"/>
 </p>
