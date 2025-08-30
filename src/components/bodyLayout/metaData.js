@@ -1,5 +1,7 @@
+import boxIcon from "/styles/icons/svgs/arch-box.svg";
+
 // image icons substitute for bullet points
-import  pinIcon from "/miscell/pinMap.png";
+import pinIcon from "/miscell/pinMap.png";
 import chipIcon from "/miscell/comp_chip.webp";
 import langIcon from "/styles/icons/svgs/lang.svg";
 import youtubeIcon from "/miscell/youtube.png";
@@ -9,7 +11,7 @@ import fireIcon from "/miscell/fire.jpg";
 // import list of object data about myself
 export const myData = [
     {
-        image: "/styles/icons/svgs/arch-box.svg",
+        image: boxIcon,
         title: "Bio",
         text: ["Started programming as freshmen in uni, I don't obtain the " +
             "notorious background of starting programming in my childhood.\n" +
