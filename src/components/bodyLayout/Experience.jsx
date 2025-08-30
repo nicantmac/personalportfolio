@@ -11,13 +11,14 @@ function Experience() {
                 <div className="work-card doj-card">
                     <div className="doj-card-header">
                         <img className="work-card-img" src="/orgs/doj_usao_vae_emblem.webp" height="30rem" width="30rem" alt="Fun-Facts Icon"/>
-                        <h3 className="doj-title">Department of Justice</h3>
+                        <h3 className="doj-title">U.S. Department of Justice - Eastern District of Virginia</h3>
                     </div>
-                    <h4 className="doj-text">IT Human Resources Intern | July 2025 - Present</h4>
+                    <h4 className="doj-text">Student Intern | July 2025 - Present</h4>
                     <p className="doj-text">
-                        I’m Nick — I like building interactive, motion-rich interfaces that feel friendly and fast.
-                        By day I keep life steady in Maryland/DC; by night I tinker with React and JavaScript because
-                        I just love making UIs feel nice to use.
+                        Completed onboarding paperwork and federal forms required for public trust background checks.
+                        Assisted with account setup and administrative tasks needed for DOJ systems access.
+                        Reviewed and confirmed compliance with the DOJ Cybersecurity and Privacy Rules of Behavior, applying federal
+                        standards for protecting Personally Identifiable Information (PII) and controlled unclassified data.
                     </p>
                 </div>
 
@@ -28,16 +29,18 @@ function Experience() {
                     </div>
                     <h4 className="codepath-text">TIP101 Technical Interview Prep | May 2025 - August 2025</h4>
                     <p className="codepath-text">
-                        I’m Nick — I like building interactive, motion-rich interfaces that feel friendly and fast.
-                        By day I keep life steady in Maryland/DC; by night I tinker with React and JavaScript because
-                        I just love making UIs feel nice to use.
+                        Industry-focused course designed to strengthen problem-solving and technical
+                        communication skills for software engineering interviews. Practiced data structures and
+                        algorithms in languages like JavaScript and Python to prepare for coding challenges.
+                        Completed mock interviews and white-boarding sessions to develop clear, concise
+                        problem-solving strategies towards complex problem breakdown, time/space complexity analysis.
                     </p>
                     <span className="vert-line"></span>
                     <h4 className="codepath-text">Intermediate Web Development Program | February 2025 - May 2025</h4>
                     <p className="codepath-text">
-                        I’m Nick — I like building interactive, motion-rich interfaces that feel friendly and fast.
-                        By day I keep life steady in Maryland/DC; by night I tinker with React and JavaScript because
-                        I just love making UIs feel nice to use.
+                        Through 3 full-fledged web apps and deployed starting from basic React + Vite setups
+                        to integrating dynamic API and CRUD data management through Supabase. Practiced
+                        building modular reusable components, state management, API integration, and responsive design.
                     </p>
                 </div>
 
@@ -46,7 +49,7 @@ function Experience() {
                         <img className="work-card-img" src="/orgs/resilience_emblem.jpeg" height="30rem" width="40rem" alt="Fun-Facts Icon"/>
                         <h3 className="resilience-title">Resilience</h3>
                     </div>
-                    <h4 className="codepath-text">Software Developer Intern | August 2024 - December 2024</h4>
+                    <h4 className="codepath-text">AI Software Developer Intern | August 2024 - December 2024</h4>
                     <p className="resilience-text">
                         Developing new user-facing features using Firebase and
                         addressing bug fixes, and efficiently building reusable
@@ -83,11 +86,10 @@ function Experience() {
                     </div>
                     <h4 className="codepath-text">AI/ML Student Mentee | August 2023 - December 2023</h4>
                     <p className="ai-text">
-                        Worked in a group of 2 members creating a python script that
-                        takes a dataset of 700+ flower species and constructed a model
-                        using supervised learning and machine learning to accurately
-                        predict and classify, and implemented text-to-speech to read
-                        aloud the rendered decisions.
+                        CNN model that takes a dataset of 700+ flower species and constructed a model
+                        using supervised learning and machine learning to accurately predict and classify, and
+                        implemented text-to-speech to read aloud the rendered decisions.
+                        Achieved over 85% accuracy on a trained dataset
                     </p>
                 </div>
                 <div className="work-card work-apple-card">
@@ -101,8 +103,8 @@ function Experience() {
                         repairs, and optimizing device performance through strategic testing and
                         calibration. I’ve supported clients with everything from screen replacements
                         and battery swaps to logic board assessments and system-level diagnostics—delivering
-                        reliable solutions without official Apple affiliation. Test devices for part
-                        functionality, performance, and identify which components may need repair.
+                        reliable solutions. Test devices for part functionality, performance, and identify
+                        which components may need repair.
                     </p>
                 </div>
             </div>

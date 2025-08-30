@@ -105,7 +105,7 @@
 
 /* -------- Tech Stack Card -------- */
 /* sets unique spacing for Tech Stack Card */
-.techStack-card { padding: 1.5rem 2rem; margin: 0.5rem 1rem; }
+.techStack-card { padding: 1.5rem 2rem; margin: 2.5rem 1rem; }
 
 /* sets flex-layout(row-like structure) for items:(img) and (header) */
 .techStack-card-header { display: flex; align-items: center; gap: 1rem; }

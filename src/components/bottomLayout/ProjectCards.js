@@ -1,27 +1,29 @@
 const cardData = [
     {
-        id: 1,
         title: "LearnFlip",
         image: "",
         status: "Jun 2024",
-        description: "Explore breathtaking mountain trails and discover hidden waterfalls in this incredible journey.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
     },
     {
-        id: 2,
         title: "AI-Powered Front Door Cam",
         image: "",
         status: "Jun 2024",
-        description: "Explore breathtaking mountain trails and discover hidden waterfalls in this incredible journey.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. " +
+            "Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. " +
+            "Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. " +
+            "Vestibulum lacinia arcu eget nulla.",
     },
     {
-        id: 3,
         title: "ImagineAI",
         image: "",
         status: "Jun 2024",
-        description: "Explore breathtaking mountain trails and discover hidden waterfalls in this incredible journey.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. " +
+            "Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. " +
+            "Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. " +
+            "Vestibulum lacinia arcu eget nulla.",
     },
     {
-        id: 4,
         title: "Reconstructing",
         image: "",
         status: "TBD",
