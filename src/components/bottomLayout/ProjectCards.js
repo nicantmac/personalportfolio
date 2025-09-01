@@ -12,19 +12,19 @@ const cardData = [
         title: "AI-Powered Front Door Cam",
         image: "",
         status: "Jun 2024",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. " +
-            "Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. " +
-            "Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. " +
-            "Vestibulum lacinia arcu eget nulla.",
+        description: "AI-powered front door camera using a Raspberry Pi Module 4 and Google Coral USB Edge TPU " +
+            "for real-time object detection. Used a night vision (NoIR camera module) and PIR motion sensors to " +
+            "detect visitors and classify activity with minimal latency. The project demonstrates my exploration" +
+            " in edge AI integration and embedded systems.",
     },
     {
         title: "ImagineAI",
         image: "",
         status: "Jun 2024",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. " +
-            "Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. " +
-            "Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. " +
-            "Vestibulum lacinia arcu eget nulla.",
+        description: "CNN model classifies 700+ images across multiple flower species. " +
+            "The project involved data preprocessing, augmentation, and deep learning model optimization " +
+            "to achieve high classification accuracy. Built using TensorFlow/Keras and Python, this project" +
+            " demonstrates skills in computer vision, neural network architecture design, and image recognition.",
     },
     {
         title: "Reconstructing",
