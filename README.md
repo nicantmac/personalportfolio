@@ -1,4 +1,4 @@
-# Personal Portfolio - 👉 [Visit Me](https://nickcodes.netlify.app)
+# Personal Portfolio - 👉🏼 [Visit Me](https://nickcodes.netlify.app)
 
 My developer portfolio built with React and Vite. It's the starter-pack to display simple web dev skills in my journey as an aspiring full-stack developer. Going for a clean design, I enhanced UI with implemeting a11y and internationalization.
 
