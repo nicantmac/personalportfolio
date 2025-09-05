@@ -1,7 +1,7 @@
 const cardData = [
     {
         title: "LearnFlip",
-        image: "",
+        image: "src/assets/learnflip-preview.png",
         status: "Initiated: May 2025 | Continuous Development",
         description: "LearnFlip is an interactive learning platform with modern designed to " +
             "promising learning to be comprehensive and welcoming to all knowledge background. " +
