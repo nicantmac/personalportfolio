@@ -10,7 +10,7 @@ const cardData = [
     },
     {
         title: "AI-Powered Front Door Cam",
-        image: "/src/assets/learnflip-preview.png",
+        image: "",
         status: "Initiated: July 2025 | Continuous Development",
         description: "AI-powered front door camera using a Raspberry Pi Module 4 and Google Coral USB Edge TPU " +
             "for real-time object detection. Used a night vision (NoIR camera module) and PIR motion sensors to " +
@@ -19,7 +19,7 @@ const cardData = [
     },
     {
         title: "ImagineAI",
-        image: "/src/assets/learnflip-preview.png",
+        image: "",
         status: "Initiated: Jan 2024 | Completed",
         description: "CNN model classifies 700+ images across multiple flower species. " +
             "The project involved data preprocessing, augmentation, and deep learning model optimization " +
@@ -28,7 +28,7 @@ const cardData = [
     },
     {
         title: "Reconstructing",
-        image: "/src/assets/learnflip-preview.png",
+        image: "",
         status: "TBD",
         description: "Coming Soon...",
     },
