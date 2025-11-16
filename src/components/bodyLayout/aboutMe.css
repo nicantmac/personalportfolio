@@ -3,11 +3,11 @@
 
 .about-container { background: white; color: black; }
 
-.about-inner-container { width: 90%; margin: 0 auto; align-items: center; }
+.about-inner-container { width: 90%; margin: 0 auto; align-items: center; padding-top: 2rem; }
 
 .about-main-title {
     font-size: 3rem; font-family: Monospace, sans-serif;
-    margin: 0 0 1.25rem; line-height: 1.1;
+    margin-top: 1rem; line-height: 1.1;
 }
 
 /* Consistent/Generic CSS applied to Cards (saves space) */
@@ -208,4 +208,3 @@ align-items: center; justify-content: center;
     /* decreases font once as screen meets this width */
     .tech-label { font-size: 0.75rem; }
 }
-
