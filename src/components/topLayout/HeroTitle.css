@@ -1,35 +1,28 @@
 
 .hero-container {
-    /* Ensures grid layout and minimal height is full-page height */
+    /* grid layout and minimal height is full-page height */
     display: grid; min-height: 100vh;
     place-items: center; /* shorthand for align-items & justify-content */
-    overflow: hidden; /* ensures user can't scroll x/y-axis */
-    /* Establishes positioning context for absolutely positioned children */
-    position: relative; padding: 2rem;
+    overflow: hidden; position: relative; padding: 2rem;
     /* Creates a dotted pattern using a radial gradient with color(grayish blue) */
     background-size: 70px 70px; background-image: radial-gradient(#b6bfc7 2px, white 3px);
-    z-index: 200; /* sets stacking order at lowest in comparison to other elements */
+    z-index: 200;
 }
 
 .hero-main {
-    /* Hero Title */
-    /* Enables positioning, centers text and spaces the content evenly */
     position: relative; text-align: center; padding: 0.5rem;
-    /* Sets white background with curved corners */
     background: white; border-radius: 40%; font-family: Monospace, sans-serif;
-    letter-spacing: 0.08em; /* Sets small space in-between letters */
+    letter-spacing: 0.08em; /* small spacing in-between letters */
     color: var(--text-color);
 }
 
-/* ----- Heading + Subtitle ----- */
-/* Ensures no extra spacing and readable font */
 .hero-intro { margin: 0; font-size: 5rem; font-weight: lighter; }
 
 
 .hero-name {
-    /* Creates spacing around and between letters for "I am Nick" */
+    /* spacing around and between letters for "I am Nick" */
     margin: .15rem 0 1rem; letter-spacing: .06em;
-    font-size: 5rem; font-weight: lighter; /* readable font */
+    font-size: 5rem; font-weight: lighter;
 }
 
 /* Spacing and readable font sizing for subtitle -> "Aspiring..." */
