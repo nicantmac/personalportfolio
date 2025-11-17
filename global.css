@@ -1,0 +1,20 @@
+
+:root {
+    /* background */
+    --default-bg-color: rgb(246, 246, 250);
+
+    /* text */
+    --base-font: Monospace, Helvetica, sans-serif;
+    --text-color: #171746;
+
+    /* shaping */
+    --radius-pill: 15px;
+    --border-type: darkgray 0.5px solid;
+
+    --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.3);
+    --shadow-subtle: 0 8px 15px rgba(15, 23, 42, 0.15);
+
+    --btn-color: #fbfbff; /* Button Background Color */
+    --btn-color-hover: rgba(241, 241, 245, 0.45); /* Button Background Hovering Color */
+    --border-btn-color: lightgray; /* Border for Buttons */
+}
