@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { foreignItems } from '/src/assets/langs_flags_list.js';
 import "/src/components/topLayout/Header.css";
+import moonIcon from "/styles/icons/svgs/moon.svg";
+import sunIcon from "/styles/icons/svgs/sun.svg";
+import langIcon from "/styles/icons/svgs/lang.svg";
 
 function Header() {
     const [isDark, setIsDark] = useState(false);
@@ -22,15 +25,15 @@ function Header() {
                 {/* ui theme btn */}
                 <button className="theme-btn" onClick={() => setIsDark((prev) => (!prev))}>
                     {/* ternary render:  if true (moon btn), if not (sun btn) */}
-                    {isDark ? <img src="/styles/icons/svgs/moon.svg" alt="light-mode" aria-label="dark moode button"/>
-                        :  <img src="/styles/icons/svgs/sun.svg" alt="light-mode" aria-label="Light/Dark Mode button"/>
+                    {isDark ? <img src={moonIcon} alt="dark-mode" aria-label="dark moode button"/>
+                        :  <img src={sunIcon} alt="light-mode" aria-label="light mode button"/>
                     }
                 </button>
 
                 {/* Language icon button: onClick => let's change the state variable */}
                 <button className="lang-btn" onClick={() => setIsClicked((prev) => (!prev))}>
                     {/* Language icon on displayed on button */}
-                    <img  src="/styles/icons/svgs/lang.svg" alt="light-mode" aria-label="change language button"/>
+                    <img  src={langIcon} alt="light-mode" aria-label="change language button"/>
                 </button>
                 {/* If user clicks, the dropdown should appear */}
                 {isClicked && (
