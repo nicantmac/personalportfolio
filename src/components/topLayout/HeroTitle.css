@@ -7,7 +7,7 @@
     /* Establishes positioning context for absolutely positioned children */
     position: relative; padding: 2rem;
     /* Creates a dotted pattern using a radial gradient with color(grayish blue) */
-    background-size: 70px 70px; background-image: radial-gradient(#b6bfc7 2px, transparent 3px);
+    background-size: 70px 70px; background-image: radial-gradient(#b6bfc7 2px, white 3px);
     z-index: 200; /* sets stacking order at lowest in comparison to other elements */
 }
 

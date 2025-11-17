@@ -1,7 +1,7 @@
 
 :root {
     /* background */
-    --default-bg-color: rgb(246, 246, 250);
+    --default-bg-color: white; /* old color: rgb(246, 246, 250) */
 
     /* text */
     --base-font: Monospace, Helvetica, sans-serif;
