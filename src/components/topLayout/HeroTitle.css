@@ -1,8 +1,3 @@
-/* Root variables keep consistent features */
-:root {
-    /* Button Background Color, Button Background Hovering Color */
-    --bg-btn-color: #f0f0f0; --bg-btn-color-hover: #e7e7e7;
-}
 
 .hero-container {
     /* Ensures grid layout and minimal height is full-page height */
@@ -13,16 +8,17 @@
     position: relative; padding: 2rem;
     /* Creates a dotted pattern using a radial gradient with color(grayish blue) */
     background-size: 70px 70px; background-image: radial-gradient(#b6bfc7 2px, transparent 3px);
-    z-index: 10; /* sets stacking order at lowest in comparison to other elements */
+    z-index: 200; /* sets stacking order at lowest in comparison to other elements */
 }
 
 .hero-main {
     /* Hero Title */
     /* Enables positioning, centers text and spaces the content evenly */
-    position: relative; text-align: center; padding: 0.5rem; width: 60%;
+    position: relative; text-align: center; padding: 0.5rem;
     /* Sets white background with curved corners */
-    background: white; border-radius: 6rem; font-family: Monospace, sans-serif;
+    background: white; border-radius: 40%; font-family: Monospace, sans-serif;
     letter-spacing: 0.08em; /* Sets small space in-between letters */
+    color: var(--text-color);
 }
 
 /* ----- Heading + Subtitle ----- */
@@ -37,7 +33,7 @@
 }
 
 /* Spacing and readable font sizing for subtitle -> "Aspiring..." */
-.hero-subtitle { margin: 0 1rem; font-size: 2rem; color: black; }
+.hero-subtitle { margin: 0 1rem; font-size: 2rem; }
 
 /* wave animation target inside .hero-intro */
 .hero-intro .wave {
@@ -48,12 +44,9 @@
 
 /* each position the hand wave executes */
 @keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg) scale(1.05); }
-    20% { transform: rotate(-14deg) scale(1.2); }
-    30% { transform: rotate(20deg) scale(1.1); }
-    40% { transform: rotate(-14deg); }
-    50% { transform: rotate(10deg); }
+    0% { transform: rotate(0deg); } 10% { transform: rotate(14deg) scale(1.05); }
+    20% { transform: rotate(-14deg) scale(1.2); } 30% { transform: rotate(20deg) scale(1.1); }
+    40% { transform: rotate(-14deg); } 50% { transform: rotate(10deg); }
     60%,100% { transform: rotate(0deg); }
 }
 
@@ -63,7 +56,7 @@
 }
 
 /* ---------- Buttons Row ---------- */
-.hero-buttons {
+.hero-btns {
     /* Sets flex-layout and flex-wrap for any potential overlapping */
     display: flex; flex-wrap: wrap;
     /* Spacing around and in-between buttons, centers horizontally */
@@ -71,20 +64,20 @@
 }
 
 /* targets buttons under entire Hero Title */
-.hero-buttons .hero-title-btns {
+.talk-btn, .explore-btn {
     display: inline-flex; padding: 0.5rem 1rem; align-items: center;
     gap: .5rem; height: auto; width: auto;
+    color: var(--text-color);
     font-size: 0.85rem; font-weight: lighter; font-family: Monospace, sans-serif;
-    background-color: var(--bg-btn-color); border-radius: 25px; border: none; cursor: pointer;
-    text-decoration: none; color: black;
-    transition: all 0.2s ease-in-out;
+    background-color: transparent; border-radius: 50px; border: var(--border-type); cursor: pointer;
+    text-decoration: none; transition: all 0.2s ease-in-out;
 }
 
 /* Hover animation for buttons */
-.hero-buttons .hero-title-btns:hover { background-color: var(--bg-btn-color-hover); transform: translateY(-1px); }
+.talk-btn:hover, .explore-btn:hover { background-color: var(--btn-color-hover); transform: translateY(-2px); }
 
 /* normalize inline icon sizes (override huge rems) */
-.hero-buttons .hero-title-btns img { display: inline-block; width: 20px; height: 20px; }
+.talk-btn img, .explore-btn img { display: inline-block; width: 18px; height: 18px; }
 
 
 /* ---------- Social Icons ---------- */
@@ -115,7 +108,7 @@
     .hero-name { font-size: 2.5rem; }
     .hero-subtitle { font-size: 1.5rem; }
     .hero-main { border-radius: 1.5rem; }
-    .hero-buttons .btn { padding: .65rem 1rem; }
+    .hero-btns .btn { padding: .65rem 1rem; }
     .icon { width: 28px; height: 28px; }
 }
 
