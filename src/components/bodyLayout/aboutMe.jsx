@@ -16,7 +16,7 @@ function AboutMe() {
 
                 {/* Title */}
                 <h1 className="about-main-title">About Me</h1>
-                <p className="about-note" style={{margin: "0 auto", fontFamily: "Monospace, sans serif", color: "black", fontSize: 16}}>
+                <p className="about-note" style={{fontFamily: "Monospace, sans serif", color: "black", fontSize: 16}}>
                     Wanna skip to professional stuff? Checkout the <a href="#work" style={{color: "black"}}>Work</a> I've done.
                 </p>
 

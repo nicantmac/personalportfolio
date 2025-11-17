@@ -7,7 +7,8 @@
 
 .about-main-title {
     font-size: 3rem; font-family: Monospace, sans-serif;
-    margin-top: 1rem; line-height: 1.1;
+    position: relative; top: 30px;
+    line-height: 1.1;
 }
 
 /* Consistent/Generic CSS applied to Cards (saves space) */
