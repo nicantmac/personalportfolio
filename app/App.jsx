@@ -4,7 +4,8 @@ import AboutMe from "../src/components/bodyLayout/aboutMe.jsx";
 import Experience from "../src/components/bodyLayout/Experience.jsx";
 import Projects from "../src/components/bottomLayout/Projects.jsx";
 import Footer from "../src/components/bottomLayout/Footer.jsx";
-import "/global.css"
+import "/global.css";
+
 function App() {
     return (
         <>

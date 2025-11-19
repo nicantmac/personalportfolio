@@ -1,15 +1,170 @@
-/* Root variables for consistent color theme */
-:root{ --card-bg-color: white; --radius: 20px; }
 
-.about-container { background: white; color: black; }
+/* outer container */
+.about-container {
+    margin: var(--space-md);
+    background-color: var(--default-bg-color);
+}
 
-.about-inner-container { width: 90%; margin: 0 auto; align-items: center; padding-top: 2rem; }
+/* inner container */
+.inner-container { color: var(--text-color); font-family: var(--base-font), sans-serif; }
 
-.about-main-title {
-    font-size: 3rem; font-family: Monospace, sans-serif;
+/* */
+.title {
+    font-size: 3rem; font-family: var(--base-font), sans-serif;
     position: relative; top: 30px;
     line-height: 1.1;
 }
+
+
+/* target the first paragraph in .bio-sec */
+.bio-box p {
+    margin: 4rem 0 0;
+    letter-spacing: 1px;
+    font-size: 2.75rem;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+/* spans inside it, normal state */
+.bio-box p span {
+    color: var(--text-color);
+    transition: opacity 0.3s ease;
+}
+
+/* on hover: fade non-span text */
+.bio-box p:hover {
+    color: rgba(0, 0, 0, 0.22);  /* or use a var with lower contrast */
+}
+
+/* on hover: keep spans strong + italic */
+.bio-box p:hover span { color: var(--text-color); }
+
+/*.spare-time h3 {*/
+/*    font-size: 2rem;*/
+/*    text-align: right;*/
+/*    margin: 3.5rem 3rem 0 0; !* (4 units) margin: top/right/bottom/left *!*/
+/*}*/
+
+/*.spare-time p {*/
+/*    margin: 15px auto;*/
+/*    font-size: 1.25rem;*/
+/*}*/
+
+/*.spare-time span p {*/
+/*    !*font-size: 1.25rem;*!*/
+/*    border: var(--border-type);*/
+/*    border-radius: var(--radius-pill);*/
+/*    width: auto;*/
+/*}*/
+
+
+.spare-time {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* right-align the heading itself */
+.spare-time h3 {
+    margin: 0;
+    text-align: center;
+}
+
+/* list styling */
+.spare-time ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+/* individual items */
+.spare-time ul li {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    border: var(--border-type);
+    border-radius: var(--radius-pill);
+}
+
+
+.school-sec {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    border: var(--border-type);
+    border-radius: 25px;
+    padding: 1.25rem 1.25rem 0.75rem;
+    gap: 1rem;
+}
+
+
+.label {
+    display: flex;
+    place-items: center;
+    gap: 1rem;
+}
+
+
+.school-sec span:nth-child(3) p {
+    margin: 0 0 0.5rem;
+}
+
+
+/* ========== GRID LAYOUT (2×3) ========== */
+.stack { margin: 5rem 2rem 0; }
+
+.stack span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stack-struct {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
+}
+
+/* ========== SECTION HEADERS ========== */
+.stack-group h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* ========== LIST CONTAINER ========== */
+.stack-group ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+/* ========== PILL (LI) STYLE ========== */
+.stack-group ul li {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border-radius: 40px;
+    border: var(--border-type);
+    font-size: 0.85rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* On hover: slight lift + shade */
+.stack-group ul li:hover {
+    background: var(--btn-color-hover);
+    transform: translateY(-2px);
+}
+
+
 
 /* Consistent/Generic CSS applied to Cards (saves space) */
 .about-card {
@@ -56,7 +211,7 @@
     display: flex; flex-direction: row;
     align-items: center; justify-content: space-between;
     border: none; border-radius: 50px; background-color: #f0f0f0;
-    width: 11rem; height: 2rem; padding: 0 0.75rem; margin-bottom: 0.75rem;
+    width: 11rem; height: 2rem; padding: 0 0.75rem;
 }
 
 .academia-attending-status span {
@@ -208,4 +363,13 @@ align-items: center; justify-content: center;
     }
     /* decreases font once as screen meets this width */
     .tech-label { font-size: 0.75rem; }
+}
+
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 750px) {
+    .stack {
+        grid-template-columns: 1fr; /* stack vertically */
+        gap: 2rem;
+    }
 }

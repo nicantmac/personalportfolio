@@ -4,7 +4,7 @@
     --default-bg-color: white; /* old color: rgb(246, 246, 250) */
 
     /* text */
-    --base-font: Monospace, Helvetica, sans-serif;
+    --base-font: Monospace, Helvetica;
     --text-color: #171746;
 
     /* shaping & color */
@@ -13,4 +13,9 @@
     --shadow-subtle: 0 8px 15px rgba(15, 23, 42, 0.15);
     --btn-color: #fbfbff; /* Button Background Color */
     --btn-color-hover: rgba(241, 241, 245, 0.45); /* Button Background Hovering Color */
+
+    /* spacing */
+    --space-sm: 2rem;
+    --space-md: 1.5rem 4rem 0;
+    --space-lg: 8rem;
 }

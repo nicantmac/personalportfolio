@@ -11,7 +11,7 @@
 
 .hero-main {
     position: relative; text-align: center; padding: 0.5rem;
-    background: white; border-radius: 40%; font-family: Monospace, sans-serif;
+    background: white; border-radius: 40%; font-family: var(--base-font), sans-serif;
     letter-spacing: 0.08em; /* small spacing in-between letters */
     color: var(--text-color);
 }
@@ -61,7 +61,7 @@
     display: inline-flex; padding: 0.5rem 1rem; align-items: center;
     gap: .5rem; height: auto; width: auto;
     color: var(--text-color);
-    font-size: 0.85rem; font-weight: lighter; font-family: Monospace, sans-serif;
+    font-size: 0.85rem; font-weight: lighter; font-family: var(--base-font), sans-serif;
     background-color: transparent; border-radius: 50px; border: var(--border-type); cursor: pointer;
     text-decoration: none; transition: all 0.2s ease-in-out;
 }
