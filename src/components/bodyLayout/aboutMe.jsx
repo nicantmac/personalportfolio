@@ -12,14 +12,11 @@ function AboutMe() {
         <section id="about" className="about-container">
             <div className="inner-container">
 
-                {/* Title */}
                 <h1 className="title">About Me</h1>
-                <p className="note">
-                    Wanna skip to professional stuff? Checkout the <a href="#work" style={{color: "var(--text-color)"}}> Work</a> I've done.
-                </p>
+                <p className="note">Wanna skip to professional stuff? Checkout the <a href="#work"> Work</a> I've done.</p>
 
-                <div className="bio-sec">
-                    <div className="bio-box">
+                <div className="bio">
+                    <div className="bio-desc">
                         <p><strong>
                             <span>I’m an enthusiastic Full-Stack developer</span> based in Washington, DC with
                             2<sup>1/2</sup> years of growing experience across <span>frontend & backend development,
@@ -33,7 +30,7 @@ function AboutMe() {
                         <h3>Spare time stuff...</h3>
                         <ul>
                             {spareTime.map((item, index) => (
-                                <li key={index}>
+                                <li key={index} className="spare-item">
                                     {item.activity}
                                 </li>
                             ))}
@@ -41,9 +38,9 @@ function AboutMe() {
                     </div>
                 </div>
 
-                <div className="school-sec">
-                    <span className="academia-attending-status">
-                        <span className="attending-pulsator"></span>
+                <div className="school">
+                    <span className="stat">
+                        <span className="blinker"></span>
                         <p>Currently Attending</p>
                     </span>
                     <span className="label">
@@ -51,7 +48,7 @@ function AboutMe() {
                         <p>University of Maryland Baltimore County</p>
                     </span>
                     <span>
-                        <p><strong>B.S.</strong> in Information Systems <strong>Specialized:</strong> Human-Centered Computing — <i>Expected 2026</i></p>
+                        <p><strong>B.S.</strong> in Information Systems<strong>Specialized:</strong> Human-Centered Computing — <i>Expected 2026</i></p>
                         <p><strong>Relevant coursework:</strong> Databases, UX Design & Research, Web Development, Data Structures</p>
                     </span>
                 </div>
