@@ -55,7 +55,7 @@ function AboutMe() {
 
                 <div className="stack">
                     <span>
-                        <img height="32px" width="32px" src="styles/icons/svgs/stack.svg" alt="stack"/>
+                        <img height="32px" width="32px" src="/styles/icons/svgs/stack.svg" alt="stack"/>
                         <h3>My tech stack</h3>
                     </span>
 
