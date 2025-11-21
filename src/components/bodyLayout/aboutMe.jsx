@@ -128,6 +128,9 @@ function AboutMe() {
                                 <li>Jenkins</li>
                                 <li>Postman</li>
                                 <li>Chrome DevTools</li>
+                                <li>WCAG/A11Y</li>
+                                <li>Figma</li>
+                                <li>Material UI</li>
                             </ul>
                         </div>
                     </div>
