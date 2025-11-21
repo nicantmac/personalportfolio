@@ -99,12 +99,12 @@
 /* each full-stack item */
 .stack-group ul li {
     display: inline-block;
-    margin: 0.25rem; padding: 0.5rem 1rem;
+    margin: 0.35rem; padding: 0.5rem 1rem;
     border-radius: 50px; border: var(--border-type);
     font-size: 0.85rem; transition: all 0.2s ease-in-out;
 }
 
-.stack-group ul li:hover { background: var(--btn-color-hover); transform: translateY(-2px); }
+.stack-group ul li:hover { background: var(--btn-color-hover); transform: translateY(-2px) rotate(-2deg); }
 
 /* attending indicator */
 .stat {
