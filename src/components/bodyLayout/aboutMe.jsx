@@ -1,4 +1,6 @@
-import './aboutMe.css';
+import "./aboutMe.css";
+import stackIcon from "/styles/icons/svgs/stack.svg";
+
 function AboutMe() {
 
     const spareTime = [
@@ -55,7 +57,7 @@ function AboutMe() {
 
                 <div className="stack">
                     <span>
-                        <img height="32px" width="32px" src="/styles/icons/svgs/stack.svg" alt="stack"/>
+                        <img height="32px" width="32px" src={stackIcon} alt="stack"/>
                         <h3>My tech stack</h3>
                     </span>
 
