@@ -125,6 +125,7 @@ function AboutMe() {
                             <ul>
                                 <li>Git</li>
                                 <li>Github</li>
+                                <li>Jenkins</li>
                                 <li>Postman</li>
                                 <li>Chrome DevTools</li>
                             </ul>
