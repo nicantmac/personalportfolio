@@ -80,6 +80,7 @@ function AboutMe() {
                                 <li>HTML</li>
                                 <li>CSS</li>
                                 <li>Javascript</li>
+                                <li>Vite</li>
                                 <li>React</li>
                                 <li>Next.js</li>
                                 <li>GSAP</li>
@@ -90,6 +91,7 @@ function AboutMe() {
                         <div className="stack-group">
                             <h3>Backend & APIs</h3>
                             <ul>
+                                <li>.NET/ASP.NET</li>
                                 <li>Node.js</li>
                                 <li>Express.js</li>
                                 <li>Flask</li>
@@ -103,6 +105,7 @@ function AboutMe() {
                                 <li>SQL</li>
                                 <li>MariaDB</li>
                                 <li>Supabase</li>
+                                <li>PostgreSQL</li>
                                 <li>Firebase</li>
                             </ul>
                         </div>
@@ -111,6 +114,7 @@ function AboutMe() {
                             <h3>Cloud & DevOps</h3>
                             <ul>
                                 <li>AWS EC2</li>
+                                <li>Linux</li>
                                 <li>Docker</li>
                                 <li>Kubernetes</li>
                             </ul>
