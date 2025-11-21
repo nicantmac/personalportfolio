@@ -32,7 +32,7 @@ export const workItems = [
     {
         id: "resilience",
         logo: "/orgs/resilience_emblem.jpeg",
-        org: "Resilience",
+        org: "Resilience Inc",
         role: "AI Software Developer Intern",
         date: "August 2024 - December 2024",
         desc: "Developing new user-facing features using Firebase and addressing bug fixes, and efficiently " +

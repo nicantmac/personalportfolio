@@ -1,23 +1,47 @@
-/* Root variables help with consistency */
-:root{
-    --card-bg-color: white; /* set background color */
-    --radius: 18px; /* set radius for curved corner */
+
+.work-container {
+    margin: var(--space-md);
+    color: var(--text-color);
+    font-family: var(--base-font), sans-serif;
+    background-color: var(--default-bg-color);
 }
 
-.work-container{ padding: 2.5rem; background: white; color: black; }
-
-.work-inner-container { width: 90%; margin: 0 auto; }
-
-.work-main-title{
-    margin: 0 0 1.25rem; line-height: 1.1;
-    font-size: 3rem; font-family: Monospace, sans-serif;
+.title {
+    margin: 1rem 0;
+    font-size: 3rem; line-height: 1.1;
 }
+
+
+.work-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    padding: 1.25rem 2rem 0.5rem;
+    border: var(--border-type);
+    border-radius: var(--radius-pill);
+}
+
+.card-heading {
+    display: flex; gap: 1rem;
+    align-items: center; justify-content: flex-start;
+}
+
+.card-title { font-size: 1.4rem; margin: 0; }
+
+
+.card h4, p { margin: 10px 0; }
+
+
 
 
 /* Consistent/Generic CSS for all Work Cards */
 .work-card{
-    background: var(--card-bg-color);
-    border: none; border-radius: var(--radius);
+    background: white;
+    border: none;
     box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
     padding: 1.5rem 2rem; margin: 2.5rem 1rem;
     line-height: 1.25;
@@ -34,8 +58,6 @@
 /* sets flex-layout(row-like structure) for items:(img) and (header) */
 .work-card-header { display: flex; align-items: center; gap: 1rem; }
 
-/* sets title to readable space and size */
-.work-title { font-size: 1.4rem; margin: 0; }
 
 
 /* -------- DOJ Card -------- */
@@ -52,21 +74,20 @@
     height: 55px; width: 1px; background-color: #c2c2c2;
 }
 
+/* -------- DOJ Card -------- */
+.doj-img { width: 50px; height: 50px; }
 
 /* -------- Resilience Inc. Card -------- */
-.resilience-card-img { width: 67px; height: 50px; border-radius: 25%; }
-
+.resilience-img { width: 68px; height: 50px; border-radius: 25%; }
 
 /* -------- HeadStarter Card -------- */
-.headstarter-card-img { width: 40px; height: 40px; border-radius: 25%; }
-
+.headstarter-img { width: 40px; height: 40px; border-radius: 25%; }
 
 /* -------- AI4ALL Card -------- */
-.ai-card-img { width: 45px; height: 45px; }
-
+.ai-img { width: 45px; height: 45px; }
 
 /* -------- Apple Card -------- */
-.apple-card-img { width: 30px; height: 35px; }
+.apple-img { width: 30px; height: 35px; }
 
 
 /* Responsive CSS */
