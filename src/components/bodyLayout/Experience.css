@@ -20,7 +20,7 @@
 }
 
 .card {
-    padding: 1.25rem 2rem 0.5rem;
+    padding: 1.25rem 1.75rem 0.5rem;
     border: var(--border-type);
     border-radius: var(--radius-pill);
 }
@@ -30,7 +30,7 @@
     align-items: center; justify-content: flex-start;
 }
 
-.card-title { font-size: 1.4rem; margin: 0; }
+.card-title { font-size: 1.3rem; margin: 0; }
 
 
 .card h4, p { margin: 10px 0; }
