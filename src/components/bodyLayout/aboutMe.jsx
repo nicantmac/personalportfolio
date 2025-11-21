@@ -50,7 +50,7 @@ function AboutMe() {
                         <p>University of Maryland Baltimore County</p>
                     </span>
                     <span>
-                        <p><strong>B.S.</strong> in Information Systems<strong>Specialized:</strong> Human-Centered Computing — <i>Expected 2026</i></p>
+                        <p><strong>B.S.</strong> in Information Systems<strong> Specialized:</strong> Human-Centered Computing — <i>Expected 2026</i></p>
                         <p><strong>Relevant coursework:</strong> Databases, UX Design & Research, Web Development, Data Structures</p>
                     </span>
                 </div>
