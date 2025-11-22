@@ -7,19 +7,21 @@
 }
 
 .title {
-    margin: 1rem 0;
+    margin: 1rem 0; text-align: center;
     font-size: 3rem; line-height: 1.1;
 }
-
 
 .work-cards {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
 }
 
 .card {
+    max-width: 750px;
     padding: 1.25rem 1.75rem 0.5rem;
     border: var(--border-type);
     border-radius: var(--radius-pill);
@@ -32,47 +34,7 @@
 
 .card-title { font-size: 1.3rem; margin: 0; }
 
-
 .card h4, p { margin: 10px 0; }
-
-
-
-
-/* Consistent/Generic CSS for all Work Cards */
-.work-card{
-    background: white;
-    border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
-    padding: 1.5rem 2rem; margin: 2.5rem 1rem;
-    line-height: 1.25;
-    font-family: Monospace, sans-serif; font-size: 1.1rem;
-    transition: transform 0.2s ease-in-out;
-}
-
-/* Unique hover animation for all work cards */
-.work-card:hover { transform: scale(1.015); cursor: pointer; }
-
-/* Unique CSS for company emblems */
-.work-card-img { border-radius: 20%; }
-
-/* sets flex-layout(row-like structure) for items:(img) and (header) */
-.work-card-header { display: flex; align-items: center; gap: 1rem; }
-
-
-
-/* -------- DOJ Card -------- */
-.doj-card-img { width: 50px; height: 50px; }
-
-
-/* -------- CodePath Card -------- */
-/* line serves as pointer between job positions */
-.vert-line::before {
-    content: ""; /* empty can be used to define what is rendered inside an element or pseudo-element */
-    /* sets to block element and sets space on the left */
-    display: block; margin-left: 1rem;
-    /* creates semi-tall thin gray line */
-    height: 55px; width: 1px; background-color: #c2c2c2;
-}
 
 /* -------- DOJ Card -------- */
 .doj-img { width: 50px; height: 50px; }
@@ -88,12 +50,3 @@
 
 /* -------- Apple Card -------- */
 .apple-img { width: 30px; height: 35px; }
-
-
-/* Responsive CSS */
-@media (width < 900px) {
-    .about-cards-grid {
-        grid-template-columns:1fr;
-        margin: 2rem 0;
-    }
-}
