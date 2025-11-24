@@ -10,6 +10,33 @@ function AboutMe() {
         { activity: "late night joyrides" }, { activity: "Clash of clans" }, { activity: "embedded system stuff" }
     ];
 
+    const stackItems = [
+        {
+            title: "Languages",
+            items: ["Javascript", "Typescript", "Python", "Java", "C#", "C++"]
+        },
+        {
+            title: "Frontend Tools",
+            items: ["HTML", "CSS", "Javascript", "React", "Vite", "Next.js", "GSAP", "Framer Motion"]
+        },
+        {
+            title: "Backend & APIs",
+            items: [".NET/ASP.NET", "Node.js", "Flask", "Express.js", "RESTful APIs"]
+        },
+        {
+            title: "Databases",
+            items: ["SQL", "MariaDB", "Supabase", "PostgreSQL", "Firebase"]
+        },
+        {
+            title: "Cloud & DevOps",
+            items: ["AWS EC2", "Linux", "Docker", "Kubernetes"]
+        },
+        {
+            title: "Tools",
+            items: ["Git", "GitHub", "Jenkins", "Postman", "Chrome DevTools", "WCAG/A11Y", "Figma", "Material UI"]
+        }
+    ];
+
     return (
         <section id="about" className="about-container">
             <div className="inner-container">
@@ -62,77 +89,17 @@ function AboutMe() {
                     </span>
 
                     <div className="stack-struct">
-                        <div className="stack-group">
-                            <h3>Languages</h3>
-                            <ul>
-                                <li>Javascript</li>
-                                <li>Typescript</li>
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>C#</li>
-                                <li>C++</li>
-                            </ul>
-                        </div>
-
-                        <div className="stack-group">
-                            <h3>Frontend Tools</h3>
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
-                                <li>Vite</li>
-                                <li>React</li>
-                                <li>Next.js</li>
-                                <li>GSAP</li>
-                                <li>Framer Motion</li>
-                            </ul>
-                        </div>
-
-                        <div className="stack-group">
-                            <h3>Backend & APIs</h3>
-                            <ul>
-                                <li>.NET/ASP.NET</li>
-                                <li>Node.js</li>
-                                <li>Express.js</li>
-                                <li>Flask</li>
-                                <li>RESTful APIs</li>
-                            </ul>
-                        </div>
-
-                        <div className="stack-group">
-                            <h3>Databases</h3>
-                            <ul>
-                                <li>SQL</li>
-                                <li>MariaDB</li>
-                                <li>Supabase</li>
-                                <li>PostgreSQL</li>
-                                <li>Firebase</li>
-                            </ul>
-                        </div>
-
-                        <div className="stack-group">
-                            <h3>Cloud & DevOps</h3>
-                            <ul>
-                                <li>AWS EC2</li>
-                                <li>Linux</li>
-                                <li>Docker</li>
-                                <li>Kubernetes</li>
-                            </ul>
-                        </div>
-
-                        <div className="stack-group">
-                            <h3>Tools</h3>
-                            <ul>
-                                <li>Git</li>
-                                <li>Github</li>
-                                <li>Jenkins</li>
-                                <li>Postman</li>
-                                <li>Chrome DevTools</li>
-                                <li>WCAG/A11Y</li>
-                                <li>Figma</li>
-                                <li>Material UI</li>
-                            </ul>
-                        </div>
+                        {stackItems.map((item, index) => (
+                            <div key={index} className="stack-group">
+                                <h3>{item.title}</h3>
+                                <ul>
+                                    {item.items.map((tool, i) => (
+                                        <li key={i}>{tool}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            )
+                        )}
                     </div>
                 </div>
             </div>
