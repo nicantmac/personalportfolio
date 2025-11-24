@@ -17,6 +17,6 @@ html { scroll-behavior: smooth; }
 
     /* spacing */
     --space-sm: 2rem;
-    --space-md: 1.5rem 4rem 0;
+    --space-md: 2rem 4rem 1rem;
     --space-lg: 8rem;
 }

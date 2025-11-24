@@ -8,17 +8,18 @@
 .inner-container { color: var(--text-color); font-family: var(--base-font), sans-serif; }
 
 /* about title */
-.title {
+.about-title {
     font-size: 3rem; font-family: var(--base-font), sans-serif;
     position: relative; top: 30px;
     line-height: 1.1;
 }
 
+.note { margin-top: 10px; }
 .note a { color: var(--text-color); }
 
 /* initial features normal text */
 .bio-desc p {
-    margin: 4rem 0 0;
+    margin: 6rem 0 0;
     letter-spacing: 1px; font-size: 2.75rem; color: var(--text-color);
     transition: color 0.3s ease-in-out;
 }
@@ -37,8 +38,8 @@
 
 /* section for spare time activities */
 .spare-time {
-    margin: 3rem; gap: 1rem;
-    display: flex; flex-direction: column;
+    margin: 8rem 0 3rem; gap: 1rem; max-width: 700px;
+    display: flex; flex-direction: column; justify-self: center;
 }
 
 .spare-time h3 { margin: 0; text-align: center; }
@@ -58,8 +59,9 @@
 
 /* school section */
 .school {
+    justify-self: center;
     display: flex; flex-direction: column;
-    margin: 2rem 0; gap: 1rem;
+    margin: 4rem 0; gap: 1rem; max-width: 750px;
     padding: 1.25rem 1.25rem 0.75rem;
     border: var(--border-type); border-radius: 25px;
 }
@@ -71,7 +73,7 @@
 .school span:nth-child(3) p { margin: 0 0 0.5rem; }
 
 /* tech stack section */
-.stack { margin: 5rem 2rem 0; }
+.stack { margin: 6rem 2rem 0; }
 
 /* stack title */
 .stack span {

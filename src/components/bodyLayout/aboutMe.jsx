@@ -14,7 +14,7 @@ function AboutMe() {
         <section id="about" className="about-container">
             <div className="inner-container">
 
-                <h1 className="title">About Me</h1>
+                <h1 className="about-title">About Me</h1>
                 <p className="note">Wanna skip to professional stuff? Checkout the <a href="#work"> Work</a> I've done.</p>
 
                 <div className="bio">
