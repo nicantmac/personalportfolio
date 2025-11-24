@@ -1,7 +1,6 @@
-
 /* header */
 .header-container {
-    margin: 1rem; padding: 0.7rem 1rem;
+    margin: 1.5rem 2rem 0; padding: 0.7rem 1rem;
     position: fixed; top: 0; left: 0; right: 0;
     display: flex; justify-content: space-between; align-items: center;
     backdrop-filter: blur(8px); border: var(--border-type); border-radius: 50px;
@@ -14,8 +13,7 @@
 /* Sets spacing top/bottom and curved borders */
 .nav-lhs button {
     padding: 4px 6px;
-    border: none;
-    border: var(--border-type);
+    border: none; border: var(--border-type);
     border-radius: var(--radius-pill);
     background-color: transparent;
     transition: all 0.2s ease-in-out;
@@ -76,7 +74,7 @@ ul {
 .lang-item button:hover { background-color: var(--btn-color-hover); transform: scale(1.04); }
 .lang-item button:active { background-color: rgba(224, 224, 231, 0.45); transform: scale(0.975); }
 
-@media (width < 500px) {
+@media (width < 540px) {
     .navbar-container {
         padding: 0.5rem 1rem;
         border-radius: 1px;
