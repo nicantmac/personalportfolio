@@ -16,6 +16,14 @@ function Experience() {
                         </header>
                         <h4>{item.role} | {item.date}</h4>
                         <p>{item.desc}</p>
+                        <ul>
+                            <div className="tools-used">
+                                <p><strong>Tools:</strong></p>
+                                {item.tools.map((tool, i) => (
+                                    <li key={i}>{tool}</li>
+                                ))}
+                            </div>
+                        </ul>
                     </div>
                 ))}
             </div>
