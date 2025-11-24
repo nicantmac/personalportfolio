@@ -21,7 +21,7 @@
 }
 
 .card {
-    max-width: 750px;
+    max-width: 850px;
     padding: 1.25rem 1.75rem;
     border: var(--border-type);
     border-radius: var(--radius-pill);
