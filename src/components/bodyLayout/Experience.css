@@ -49,6 +49,7 @@
 }
 
 .tools-used li {
+    font-size: 0.8rem;
     padding: 3px 10px;
     border: var(--border-type);
     border-radius: var(--radius-pill);
