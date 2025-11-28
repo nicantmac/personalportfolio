@@ -43,12 +43,16 @@
 .ai-img { width: 45px; height: 45px; }
 .apple-img { width: 30px; height: 35px; }
 
+/* sets bullet points and changes default list styling */
+.card li { list-style-type: disc; list-style-position: inside; }
+
 .tools-used {
     display: flex; gap: 0.5rem; flex-wrap: wrap;
     align-items: center; justify-content: flex-start;
 }
 
 .tools-used li {
+    list-style-type: none;
     font-size: 0.8rem;
     padding: 3px 10px;
     border: var(--border-type);

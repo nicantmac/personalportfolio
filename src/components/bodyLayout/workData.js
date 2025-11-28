@@ -1,4 +1,3 @@
-
 export const workItems = [
     {
         id: "doj",
@@ -7,10 +6,9 @@ export const workItems = [
         role: "Student Intern",
         date: "July 2025 - Present",
         tools: ["PII", "Security Clearance", "Handling federal documents"],
-        desc: "Completed onboarding paperwork and federal forms required for public trust background checks.\n" +
-            "Assisted with account setup and administrative tasks needed for DOJ systems access.\n" +
-            "Reviewed and confirmed compliance with the DOJ Cybersecurity and Privacy Rules of Behavior, applying federal\n" +
-            "standards for protecting Personally Identifiable Information (PII) and controlled unclassified data."
+        listing: ["Helped with federal onboarding and assisted with administrative tasks required for DOJ access",
+            "Organized case files, prepared documentation packets, and maintained accurate records for attorney review",
+            "Completed mandatory federal compliance trainings on ethics, privacy, security, and records handling"]
     },
     {
         id: "resilience",
@@ -19,11 +17,9 @@ export const workItems = [
         role: "AI Software Developer Intern",
         date: "August 2024 - December 2024",
         tools: ["Python", "Git/Github", "Firebase", "MFCC's", "Librosa", "Tensorflow", "Pandas", "Numpy"],
-        desc: "Developing new user-facing features using Firebase and addressing bug fixes, and efficiently " +
-            "building reusable code for great scalability and maintainability. Continuously becoming more acclimated " +
-            "to authentication and user management systems to improve security and user experience, as well as " +
-            "ensuring secure data storage on both client-side devices and servers. Working alongside senior software " +
-            "engineers solving problems and collaborating with other Resilience Inc divisions."
+        listing: ["Strengthened authentication and user-management workflows by gaining hands-on experience with secure login, session handling, and role-based access",
+            "Ensured safe and compliant data storage by implementing best practices for client-side and server-side security, including encryption and validation",
+            "Collaborated with senior software engineers to troubleshoot issues, optimize performance, and contribute to cross-team projects across multiple divisions at Resilience Inc"]
     },
     {
         id: "headstarter",
@@ -32,11 +28,9 @@ export const workItems = [
         role: "Full-Stack Student Mentee",
         date: "May 2024 - September 2024",
         tools: ["Javascript", "Typescript", "RAG", "OpenAI", "Next.js", "React", "Node.js", "Pinecone", "Stripe API", "AWS", "Git/Github"],
-        desc: "Developed an AI Customer Support system and integrated it with OpenAI, Next.js,\n" +
-            " and AWS. This was followed by the AI Flashcards & Stripe project, where I worked on integrating " +
-            "OpenAI, Auth, and StripeAPI functionalities. Later, I contributed to an imitation of Rate My " +
-            "Professor utilizing AI, particularly involved using Retrieval-Augmented Generation (RAG), OpenAI, and\n" +
-            " vector-based technologies."
+        listing: ["Developed an AI-powered customer support system using OpenAI, Next.js, and AWS, enabling automated responses and enhanced user assistance",
+            "Built an AI Flashcards application integrated with OpenAI, authentication services, and Stripe API for secure payments and user access control",
+            "Contributed to an AI-driven Rate-My-Professor–style platform using Retrieval-Augmented Generation (RAG), OpenAI models, and vector-search technologies to deliver context-aware professor insights"]
     },
     {
         id: "ai",
@@ -45,8 +39,9 @@ export const workItems = [
         role: "AI/ML Student Mentee",
         date: "August 2023 - December 2023",
         tools: ["Python", "Numpy", "Pandas", "Tensorflow", "Matplotlib", "Text-to-Speech"],
-        desc: "CNN model that takes a dataset of 700+ flower species and constructed a model using supervised " +
-            "learning and machine learning to accurately predict and classify, and implemented text-to-speech " +
-            "to read aloud the rendered decisions. Achieved over 85% accuracy on a trained dataset"
+        listing: ["Developed a Convolutional Neural Network (CNN) trained on a dataset of 700+ flower species using supervised learning techniques.",
+            "Performed data preprocessing, normalization, and augmentation to improve model generalization and accuracy.",
+            "Achieved over 85% accuracy on the final trained model for multi-class classification",
+            "Implemented a text-to-speech feature to read predictions aloud, enhancing accessibility and user interaction"]
     }
 ]

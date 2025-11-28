@@ -15,7 +15,13 @@ function Experience() {
                             <h3 className="card-title">{item.org}</h3>
                         </header>
                         <h4>{item.role} | {item.date}</h4>
-                        <p>{item.desc}</p>
+                        {/* loop through my job details */}
+                        <ul>
+                            {item.listing.map((descItem) => (
+                                <li>{descItem}</li>
+                            ))}
+                        </ul>
+                        {/* loops through tools used on job */}
                         <ul>
                             <div className="tools-used">
                                 <p><strong>Tools:</strong></p>
