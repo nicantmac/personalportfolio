@@ -12,11 +12,12 @@ html { scroll-behavior: smooth; }
     --radius-pill: 15px;
     --border-type: darkgray 0.5px solid;
     --shadow-subtle: 0 8px 15px rgba(15, 23, 42, 0.15);
-    --btn-color: #fbfbff; /* Button Background Color */
-    --btn-color-hover: rgba(241, 241, 245, 0.45); /* Button Background Hovering Color */
+    --btn-color: #fbfbff;
+    --btn-color-hover: rgba(241, 241, 245, 0.45);
 
     /* spacing */
     --space-sm: 2rem;
     --space-md: 2rem 4rem 1rem;
     --space-lg: 8rem;
 }
+

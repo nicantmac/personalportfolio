@@ -20,7 +20,7 @@
     margin-top: 3rem;
 }
 
-.card {
+.job {
     max-width: 850px;
     padding: 1.25rem 1.75rem;
     border: var(--border-type);
@@ -34,7 +34,7 @@
 
 .card-title { font-size: 1.3rem; margin: 0; }
 
-.card h4, p { margin: 10px 0; }
+.job h4, p { margin: 10px 0; }
 
 /* specific img sizing for company logo */
 .doj-img { width: 50px; height: 50px; }
@@ -44,7 +44,7 @@
 .apple-img { width: 30px; height: 35px; }
 
 /* sets bullet points and changes default list styling */
-.card li { list-style-type: disc; list-style-position: inside; }
+.job li { list-style-type: disc; list-style-position: inside; }
 
 .tools-used {
     display: flex; gap: 0.5rem; flex-wrap: wrap;

@@ -1,21 +1,39 @@
-import './Projects.css';
-import cardData from '/src/components/bottomLayout/ProjectCards.js';
+import "./Projects.css";
+import { useState} from "react";
+import cardData from "/src/components/bottomLayout/ProjectCards.js";
+import gitIcon from "/styles/icons/svgs/github.svg";
 
 function Projects() {
+    const [index, setIndex] = useState(0);
+
+    const next = () => {
+        setIndex(i => (i + 1) % cardData.length);
+    };
+
+    const prev = () => {
+        setIndex(i => (i - 1 + cardData.length) % cardData.length);
+    };
+
     return (
         <section id="projects" className="projects-container">
-            <div className="projects-inner-container">
-                <h1 className="projects-main-title">Projects</h1>
-                {cardData.map((card, index) => (
-                    <div key={index} className="project-card project-grid">
-                        <img src={card.image} alt={card.title} />
-                        <div className="project-card-subtext">
-                            <h3 className="project-card-subtitle">{card.title}</h3>
-                            <p className="project-card-text">{card.status}</p>
-                            <p className="project-card-text">{card.description}</p>
-                        </div>
+            <h1>Projects</h1>
+            <div className="proj-card">
+                <div className="part1">
+                    <img height="256px" width="400px" src={cardData[index].image} alt={cardData[index].title}/>
+                    <div className="info-sec">
+                        <a href={cardData[index].link} target="_blank"><img src={gitIcon} alt="Github Icon"/></a>
+                        <p>{cardData[index].status}</p>
                     </div>
-                ))}
+                </div>
+                <div className="part2">
+                    <h2>{cardData[index].title}</h2>
+                    <p>{cardData[index].description}</p>
+                </div>
+            </div>
+             <div className="navigators">
+                <button className="btn-handle" onClick={prev}>prev</button>
+                 <p>{(index + 1)}/{cardData.length}</p>
+                <button className="btn-handle" onClick={next}>next</button>
             </div>
         </section>
     );

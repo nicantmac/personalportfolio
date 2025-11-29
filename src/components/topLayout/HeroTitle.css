@@ -48,7 +48,6 @@
     .hero-intro .wave { animation: none; }
 }
 
-/* ---------- Buttons Row ---------- */
 .hero-btns {
     /* Sets flex-layout and flex-wrap for any potential overlapping */
     display: flex; flex-wrap: wrap;
@@ -72,8 +71,6 @@
 /* normalize inline icon sizes (override huge rems) */
 .talk-btn img, .explore-btn img { display: inline-block; width: 18px; height: 18px; }
 
-
-/* ---------- Social Icons ---------- */
 .social-icons {
     margin-top: 1.75rem; display: flex;
     justify-content: center; gap: .9rem;
@@ -94,8 +91,6 @@
 .icon.linkedin { background-image: url('/styles/icons/svgs/linkedin.svg'); }
 .icon.github   { background-image: url('/styles/icons/svgs/github.svg'); }
 
-
-/* ---------- Responsive Tweaks ---------- */
 @media (max-width: 640px) {
     .hero-intro { font-size: 3.5rem; }
     .hero-name { font-size: 2.5rem; }
@@ -105,8 +100,6 @@
     .icon { width: 28px; height: 28px; }
 }
 
-
-/* ---------- Nice, soft card halo on large screens ---------- */
 @media (min-width: 900px) {
     .hero-main::before {
         content: "";

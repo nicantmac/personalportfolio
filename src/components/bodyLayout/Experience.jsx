@@ -9,7 +9,7 @@ function Experience() {
 
             <div className="work-cards">
                 {workItems.map((item, index) => (
-                    <div key={index} className="card">
+                    <div key={index} className="job">
                         <header className="card-heading">
                             <img className={`${item.id}-img`} src={item.logo} alt={`${item.org} logo`}/>
                             <h3 className="card-title">{item.org}</h3>
@@ -17,8 +17,8 @@ function Experience() {
                         <h4>{item.role} | {item.date}</h4>
                         {/* loop through my job details */}
                         <ul>
-                            {item.listing.map((descItem) => (
-                                <li>{descItem}</li>
+                            {item.listing.map((descItem, i) => (
+                                <li key={i}>{descItem}</li>
                             ))}
                         </ul>
                         {/* loops through tools used on job */}
