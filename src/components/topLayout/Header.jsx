@@ -57,7 +57,6 @@ function Header() {
                 <a href="#about" className="journey-btn">{t('nav.journey')}</a>
                 <a href="#work" className="xp-btn">{t('nav.experience')}</a>
                 <a href="#projects" className="project-btn">{t('nav.projects')}</a>
-                <a href="#footer" className="contact-btn">{t('nav.contact')}</a>
             </div>
         </header>
     );

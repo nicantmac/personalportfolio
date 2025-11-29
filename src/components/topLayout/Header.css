@@ -74,12 +74,11 @@ ul {
 .lang-item button:hover { background-color: var(--btn-color-hover); transform: scale(1.04); }
 .lang-item button:active { background-color: rgba(224, 224, 231, 0.45); transform: scale(0.975); }
 
-@media (width < 540px) {
+@media (width < 430px) {
     .navbar-container {
         padding: 0.5rem 1rem;
         border-radius: 1px;
         justify-content: center;
     }
-    .nav-rhs { display: grid; grid-template-columns: repeat(2, auto); margin: 0.5rem; }
     .nav-rhs button { margin: 0.35rem; }
 }
