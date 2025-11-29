@@ -27,7 +27,7 @@ function Projects() {
                 </div>
                 <div className="part2">
                     <h2>{cardData[index].title}</h2>
-                    <p>{cardData[index].description}</p>
+                    <p>{cardData[index].desc}</p>
                 </div>
             </div>
              <div className="navigators">

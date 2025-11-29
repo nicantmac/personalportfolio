@@ -2,10 +2,12 @@ import { useTranslation } from 'react-i18next';
 import '/src/components/topLayout/HeroTitle.css';
 import peopleIcon from '/styles/icons/svgs/people.svg';
 import downArrowIcon from '/styles/icons/svgs/down-arrow.svg';
-
+import Modal from "/src/components/Modal.jsx";
+import { useState} from "react";
 
 function HeroTitle() {
     const { t } = useTranslation();
+    const [modOpen, setMod] = useState(false)
 
     // noinspection JSValidateTypes
     return (
@@ -21,13 +23,15 @@ function HeroTitle() {
 
                 {/* btns */}
                 <div className="hero-btns">
-                    <button className="talk-btn" aria-label="bio section">
+                    <button onClick={() => setMod(true)} className="talk-btn" aria-label="bio section">
                         {t('hero-btn.talk')}<img src={peopleIcon} alt="people icon" />
                     </button>
                     <a href="#about" className="explore-btn" aria-label="scroll down btn">
                         {t('hero-btn.explore')}<img src={downArrowIcon} alt="down arrow" />
                     </a>
                 </div>
+                {/* Modal lives outside main so it overlays nicely */}
+                <Modal isOpen={modOpen} onClose={() => setMod(false)}></Modal>
 
                 {/* social links */}
                 <div className="social-icons">
