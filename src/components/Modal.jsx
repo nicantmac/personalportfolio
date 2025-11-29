@@ -1,4 +1,4 @@
-// src/components/Modal.jsx
+import "./Modal.css";
 function Modal({ isOpen, onClose }) {
     if (!isOpen) return null; // don't render anything if closed
 
