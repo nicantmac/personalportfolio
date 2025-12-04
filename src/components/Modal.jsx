@@ -26,15 +26,15 @@ function Modal({ isOpen, onClose }) {
                         {/* Contact form */}
                         <form className="modal-form">
                             <div className="info">
-                                <label htmlFor="name" className="sr-only">Name</label>
+                                {/*<label htmlFor="name">Name</label>*/}
                                 <input id="name" name="name" type="text" placeholder="name…" required/>
 
-                                <label htmlFor="email" className="sr-only">Email</label>
+                                {/*<label htmlFor="email">Email</label>*/}
                                 <input id="email" name="email" type="email" placeholder="john@gmail.com" required/>
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="sr-only">Message</label>
+                                {/*<label htmlFor="message">Message</label>*/}
                                 <textarea
                                     className={`write-msg ${areaText.length > maxLength ? "error" : ""}`}
                                     id="message" name="message"
@@ -47,7 +47,7 @@ function Modal({ isOpen, onClose }) {
                                     {areaText.length}/{maxLength} characters
                                 </div>
                             </div>
-                            <button type="submit" className="modal-submit">Send</button>
+                            <button type="submit">Send</button>
                         </form>
                     </div>
                 </div>
