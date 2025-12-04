@@ -1,24 +1,31 @@
+import { useState } from "react";
 import "./Modal.css";
-function Modal({ isOpen, onClose }) {
-    if (!isOpen) return null; // don't render anything if closed
 
+function Modal({ isOpen, onClose }) {
+    const [areaText, setAreaText] = useState("");
+    const maxLength = 200;
+
+    if (!isOpen) return null; // don't render anything if closed
     const stopPropagation = (e) => e.stopPropagation();
 
     return (
         <section className="modal-sec">
             {/* Backdrop */}
             <div className="modal-backdrop" onClick={onClose}>
+
                 {/* Modal box */}
                 <div className="modal-box" onClick={stopPropagation}>
-                    <button className="modal-close" onClick={onClose}>×</button>
+                    <button className="x-btn" onClick={onClose}>×</button>
+
                     <div className="modal-content">
-                        <header className="modal-header">
+                        <header>
                             <span className="blinker"></span>
                             <h2 id="contact-modal-title">Online</h2>
                         </header>
+
                         {/* Contact form */}
                         <form className="modal-form">
-                            <div className="modal-row">
+                            <div className="info">
                                 <label htmlFor="name" className="sr-only">Name</label>
                                 <input id="name" name="name" type="text" placeholder="name…" required/>
 
@@ -26,19 +33,21 @@ function Modal({ isOpen, onClose }) {
                                 <input id="email" name="email" type="email" placeholder="john@gmail.com" required/>
                             </div>
 
-                            <div className="modal-row">
+                            <div>
                                 <label htmlFor="message" className="sr-only">Message</label>
                                 <textarea
-                                    id="message"
-                                    name="message"
+                                    className={`write-msg ${areaText.length > maxLength ? "error" : ""}`}
+                                    id="message" name="message"
+                                    value={areaText}
+                                    onChange={(e) => setAreaText(e.target.value)}
                                     placeholder="write message..."
                                     rows={8}
                                 />
+                                <div style={{ marginLeft: "10px", textAlign: "left", fontSize: "0.9em", color: areaText.length > maxLength ? "#ff6a63" : "gray" }}>
+                                    {areaText.length}/{maxLength} characters
+                                </div>
                             </div>
-
-                            <div className="modal-actions">
-                                <button type="submit" className="modal-submit">Send</button>
-                            </div>
+                            <button type="submit" className="modal-submit">Send</button>
                         </form>
                     </div>
                 </div>
