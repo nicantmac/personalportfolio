@@ -80,13 +80,15 @@
     font-size: 1rem;
     resize: vertical;
     border-radius: 20px;
-    border: 2px solid #dadada;
+    border: none;
+    outline: 2px solid #dadada;
     font-family: inherit;
-    transition: border-color 0.4s ease;
+    transition: outline-color 0.4s ease;
 }
-.write-msg:focus { border-color: #656565; }
+.write-msg:focus { outline-color: #656565; }
 
-.write-msg.error { border-color: red; animation: shake 0.3s ease}
+.write-msg.error {  outline: #ff6a63 2px solid !important; animation: shake 0.3s ease;}
+.write-msg.error:focus { }
 
 @keyframes shake {
     0% { transform: translateX(0); }
