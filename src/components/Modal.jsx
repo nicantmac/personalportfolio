@@ -3,7 +3,7 @@ import "./Modal.css";
 
 function Modal({ isOpen, onClose }) {
     const [areaText, setAreaText] = useState("");
-    const maxLength = 200;
+    const maxLength = 300;
 
     if (!isOpen) return null; // don't render anything if closed
     const stopPropagation = (e) => e.stopPropagation();
