@@ -1,10 +1,12 @@
 /* header */
 .header-container {
-    margin: 1.5rem 2rem 0; padding: 0.7rem 1rem;
+    padding: 0.7rem 1rem; width: 85%;
+    margin-top: 1.5rem;
+    margin-left: auto; margin-right: auto; /* centers element */
     position: fixed; top: 0; left: 0; right: 0;
     display: flex; justify-content: space-between; align-items: center;
     backdrop-filter: blur(8px); border: var(--border-type); border-radius: 50px;
-    z-index: 300;
+    z-index: 300; max-width: 950px;
 }
 
 /* Left Side btns: (ui theme) & (language) */
@@ -38,9 +40,9 @@
 
 /* nav list for choosing langs */
 nav {
+    padding: 0.75rem;
     /* absolute ensures dropdown abides to parent position */
     position: absolute; top: 125%; left: 3px;
-    padding: 0.75rem;
     background-color: var(--default-bg-color);
     border: var(--border-type); border-radius: 20px;
     box-shadow: var(--shadow-subtle); /* top/bottom - left/right - blur / color */
