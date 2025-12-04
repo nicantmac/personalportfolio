@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import '/src/components/topLayout/HeroTitle.css';
-import peopleIcon from '/styles/icons/svgs/people.svg';
-import downArrowIcon from '/styles/icons/svgs/down-arrow.svg';
+import Header from "./Header.jsx";
 import Modal from "/src/components/Modal.jsx";
 import { useState} from "react";
+import peopleIcon from '/styles/icons/svgs/people.svg';
+import downArrowIcon from '/styles/icons/svgs/down-arrow.svg';
 
 function HeroTitle() {
     const { t } = useTranslation();
@@ -12,7 +13,8 @@ function HeroTitle() {
     // noinspection JSValidateTypes
     return (
         <section className="hero-container"> {/* hero entire container */}
-            <main className="hero-main"> {/* hero inner container */}
+            <main className="hero-main"> {/* bubble looking container */}
+                <Header/> {/* renders responsive header */}
 
                 {/* intro Text */}
                 <h1 className="hero-intro">
@@ -30,6 +32,7 @@ function HeroTitle() {
                         {t('hero-btn.explore')}<img src={downArrowIcon} alt="down arrow" />
                     </a>
                 </div>
+
                 {/* Modal lives outside main so it overlays nicely */}
                 <Modal isOpen={modOpen} onClose={() => setMod(false)}></Modal>
 
