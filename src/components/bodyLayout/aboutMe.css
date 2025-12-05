@@ -1,6 +1,7 @@
 /* outer container */
 .about-container {
-    margin: var(--space-md);
+    /*margin: var(--space-md);*/
+    padding-inline: clamp(1.25rem, 5vw, 6rem); /* left + right */
     background-color: var(--default-bg-color);
 }
 
@@ -19,8 +20,9 @@
 
 /* initial features normal text */
 .bio-desc p {
-    margin: 5rem 0 0; padding: 0 1.5rem;
-    letter-spacing: 1px; font-size: 2.75rem; color: var(--text-color);
+    margin: 5rem 0 0;
+    letter-spacing: 1px; color: var(--text-color);
+    font-size: clamp(1rem, 4vw + 0.5rem, 2.5rem);
     transition: color 0.3s ease-in-out;
 }
 
@@ -38,7 +40,7 @@
 
 /* section for spare time activities */
 .spare-time {
-    margin: 6rem 0 3rem; gap: 1rem; max-width: 700px;
+    margin: 6rem 0 3rem; gap: 1rem; max-width: 750px;
     display: flex; flex-direction: column; justify-self: center;
 }
 
@@ -46,14 +48,14 @@
 
 .spare-time ul {
     display: inline-block; text-align: center;
-    margin: 0; padding: 0;
-    list-style: none;
+    margin: 0; padding: 0; list-style: none;
 }
 
 /* individual items */
 .spare-time ul li {
     display: inline-block; /* to fit the items according to width */
     margin: 0.5rem; padding: 0.35rem 0.75rem;
+    font-size: 0.85rem; white-space: nowrap;
     border: var(--border-type); border-radius: var(--radius-pill);
 }
 
@@ -61,24 +63,26 @@
 .school {
     justify-self: center;
     display: flex; flex-direction: column;
-    margin: 4rem 0; gap: 1rem; max-width: 750px;
-    padding: 1.25rem 1.25rem 0.75rem;
+    margin: 4rem 0; gap: 0.75rem; max-width: 750px;
+    padding: 1.2rem 1.3rem 0.75rem;
     border: var(--border-type); border-radius: 25px;
 }
 
 /* sets flex layout for school logo & name */
 .label { display: flex; place-items: center; gap: 1rem; }
 
+.stat p { white-space: nowrap; }
+
 /* applies specific spacing to 3rd span */
-.school span:nth-child(3) p { margin: 0 0 0.5rem; }
+.school span:nth-child(3) p { margin: 0 0 0.7rem;}
 
 /* tech stack section */
-.stack { margin: 6rem 2rem 0; }
+.stack { margin-top: 6rem; }
 
 /* stack title */
 .stack span {
-    display: flex; justify-content: center; align-items: center;
-    margin-bottom: 2rem; gap: 1rem;
+    display: flex; gap: 1rem;
+    justify-content: center; align-items: center;
 }
 
 /* each section of full-stack tools */
@@ -88,7 +92,7 @@
 }
 
 .stack-group h3 {
-    margin: 0 0 0.75rem 0;
+    margin-bottom: 0.75rem;
     font-size: 1.6rem; color: var(--text-color);
 }
 
@@ -101,9 +105,10 @@
 /* each full-stack item */
 .stack-group ul li {
     display: inline-block;
-    margin: 0.35rem; padding: 0.5rem 1rem;
+    margin: 0.35rem; padding: 0.4rem 0.7rem;
     border-radius: 50px; border: var(--border-type);
-    font-size: 0.85rem; transition: all 0.2s ease-in-out;
+    font-size: clamp(0.7rem, 0.8rem + 0.185vw, 1.1rem);
+    transition: all 0.2s ease-in-out;
 }
 
 .stack-group ul li:hover { background: var(--btn-color-hover); transform: translateY(-2px) rotate(-2deg); }
@@ -134,4 +139,5 @@
 
 @media (max-width: 750px) {
     .stack { grid-template-columns: 1fr; gap: 2rem; }
+    .stack-struct { grid-template-columns: repeat(1, 1fr); }
 }
