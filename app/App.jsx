@@ -1,4 +1,3 @@
-// import Header from "../src/components/topLayout/Header.jsx";
 import HeroTitle from "../src/components/topLayout/HeroTitle.jsx";
 import AboutMe from "../src/components/bodyLayout/aboutMe.jsx";
 import Experience from "../src/components/bodyLayout/Experience.jsx";
@@ -9,7 +8,6 @@ import "/global.css";
 function App() {
     return (
         <>
-            {/*<Header />*/}
             <HeroTitle />
             <AboutMe />
             <Experience />
