@@ -6,7 +6,7 @@
     overflow: hidden; position: relative; padding: 2rem;
     /* Creates a dotted pattern using a radial gradient with color(grayish blue) */
     background-size: 60px 60px; background-image: radial-gradient(#b6bfc7 2px, white 1px);
-    z-index: 200;
+    z-index: 200; font-weight: lighter;
 }
 
 .hero-main {
@@ -16,16 +16,17 @@
     color: var(--text-color);
 }
 
-.hero-intro { margin: 0; font-size: 5rem; font-weight: lighter; }
+.hero-intro { margin: 0; font-size: clamp(3rem, 8vw, 5rem); font-weight: inherit; }
 
 .hero-name {
     /* spacing around and between letters for "I am Nick" */
     margin: 0.15rem 0 1rem; letter-spacing: 0.06em;
-    font-size: 5rem; font-weight: lighter;
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    font-weight: inherit;
 }
 
 /* Spacing and readable font sizing for subtitle -> "Aspiring..." */
-.hero-subtitle { margin: 0 1rem; font-size: 2rem; }
+.hero-subtitle { margin: 0 1rem; font-size: clamp(1.2rem, 4.2vw, 2rem); }
 
 /* wave animation target inside .hero-intro */
 .hero-intro .wave {
@@ -89,9 +90,7 @@
 
 /* screen breakpoint for mobile devices */
 @media (width < 640px) {
-    .hero-intro { font-size: 3.5rem; }
-    .hero-name { font-size: 3rem; }
-    .hero-subtitle { font-size: 1.6rem; white-space: nowrap; }
+    .hero-subtitle { white-space: nowrap; }
     .hero-main { border-radius: 1.5rem; }
     .hero-btns .btn { padding: 0.65rem 1rem; }
     .icon { width: 32px; height: 32px; }
