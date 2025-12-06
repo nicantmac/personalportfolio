@@ -1,6 +1,5 @@
 /* outer container */
 .about-container {
-    /*margin: var(--space-md);*/
     padding-inline: clamp(1.5rem, 8vw, 8rem); /* left + right */
     background-color: var(--default-bg-color);
 }
@@ -138,7 +137,7 @@
     100% { transform: scale(0.8); opacity: 1; }
 }
 
-@media (max-width: 750px) {
+@media (width < 750px) {
     .stack { grid-template-columns: 1fr; gap: 2rem; }
-    .stack-struct { grid-template-columns: repeat(1, 1fr); }
+    .stack-struct { grid-template-columns: repeat(1, 1fr); row-gap: 0.5rem; }
 }

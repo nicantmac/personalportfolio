@@ -68,8 +68,9 @@ ul {
 .lang-item button {
     /* Sets flex-layout and aligns on x/y-axis */
     display: flex; align-items: center; justify-content: center;
-    width: 100%; gap: 0.75rem; padding: 0.3rem 0.5rem;
-    border: var(--border-type); border-radius: 20px; background-color: var(--default-bg-color);
+    width: 100%; gap: 0.6rem; padding: 0.3rem 0.5rem;
+    border: var(--border-type); border-radius: 13px; background-color: transparent;
+    font-family: inherit;
     transition: all 0.2s ease-in-out;
 }
 
@@ -95,5 +96,4 @@ ul {
         padding: 0.5rem; backdrop-filter: blur(8px);
         border: var(--border-type); border-radius: 20px;
     }
-    .nav-rhs button { margin: 0.35rem; }
 }

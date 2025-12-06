@@ -29,9 +29,14 @@
     position: absolute; top: 0.8rem; right: 1rem;
     background: transparent; border-radius: 50px; border: none;
     font-size: 1.5rem; color: var(--text-color);
-    cursor: pointer; transition: transform 0.35s ease;
+    cursor: pointer;
 }
-.x-btn:hover { transform: rotate(90deg); }
+.x-img {
+    width: 24px; height: 24px;
+    transition: transform 0.3s ease;
+    /*transform-origin: center;*/
+}
+.x-btn:hover .x-img { transform: rotate(90deg); }
 
 .modal-content { display: flex; flex-direction: column; gap: 1.5rem; }
 

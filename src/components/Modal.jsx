@@ -1,4 +1,5 @@
 import { useState } from "react";
+import xIcon from "/styles/icons/svgs/x-mark.svg";
 import "./Modal.css";
 
 function Modal({ isOpen, onClose }) {
@@ -15,7 +16,9 @@ function Modal({ isOpen, onClose }) {
 
                 {/* Modal box */}
                 <div className="modal-box" onClick={stopPropagation}>
-                    <button className="x-btn" onClick={onClose}>×</button>
+                    <button className="x-btn" onClick={onClose}>
+                        <img className="x-img" src={xIcon} alt={"close"}/>
+                    </button>
 
                     <div className="modal-content">
                         <header>
