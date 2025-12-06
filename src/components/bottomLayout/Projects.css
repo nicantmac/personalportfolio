@@ -11,7 +11,7 @@
     display: flex; gap: 2rem;
     width: min(100%, 800px);
     align-items: center; justify-content: center;
-    margin: 1rem 0; padding: 1rem;
+    margin: 1rem 0; padding: 1.2rem;
     border: var(--border-type); border-radius: var(--radius-pill);
 }
 
@@ -24,7 +24,7 @@
 
 .info-sec {
     margin-top: 0.5rem;
-    display: flex; gap: 1rem;
+    display: flex; gap: 0.7rem;
     align-items: center; justify-content: center;
 }
 
@@ -53,61 +53,36 @@
     display: flex; gap: 3rem;
 }
 
-.navigators button {
-    font-family: var(--base-font), sans-serif;
-}
+.navigators button { font-family: var(--base-font), sans-serif; }
 
-.card p {
-    font-size: 1rem;
-    padding: 0.75rem 0.9rem;
-    background-color: #f5f5f5;
-    border-radius: 20px;
-    display: inline-block;
-    line-height: 1.4;
-    margin: 0.25rem 0;
-}
-
-/* Optional controls (kept if you still show buttons somewhere) */
 .btn-nav {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
+    margin-top: 1rem; gap: 1rem;
+    display: flex; justify-content: center;
 }
 
 .btn-handle {
     padding: 0 0.75rem;
     background-color: transparent;
-    border: var(--border-type);
-    border-radius: var(--radius-pill);
-    transition: all 0.3s ease;
+    border: var(--border-type);border-radius: var(--radius-pill);
+    cursor: pointer; transition: all 0.3s ease;
 }
 
 .btn-handle:hover {
     background-color: var(--btn-color-hover);
     transform: scale(1.05);
-    cursor: pointer;
 }
+
 /* tablet + small laptop */
 @media (max-width: 850px) {
     .proj-card {
-        flex-direction: column;
-        text-align: left;
         gap: 1.25rem;
+        flex-direction: column; text-align: left;
     }
-
-    .proj-lhs {
-        align-items: center;
-    }
+    .proj-lhs { align-items: center; }
 
     .proj-lhs img {
-        width: 100%;
-        max-width: 360px;
         height: auto;
+        width: 100%; max-width: 360px;
     }
-
-    .proj-rhs {
-        width: 100%;
-        align-items: flex-start;
-    }
+    .proj-rhs { width: 100%; align-items: flex-start; }
 }
