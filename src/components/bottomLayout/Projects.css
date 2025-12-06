@@ -1,31 +1,37 @@
 .projects-container {
-    margin: var(--space-md);
+    margin-top: 4rem; padding-inline: clamp(2.5rem, 6vw, 8rem);
     display: flex; flex-direction: column; align-items: center;
     color: var(--text-color); font-family: var(--base-font), sans-serif;
     background-color: var(--default-bg-color);
 }
 
-.projects-container h1 { text-align: center; font-size: 3rem; line-height: 1.15; }
+.projects-container h1 { margin: 0; text-align: center; font-size: 3rem; line-height: 1.15; }
 
 .proj-card {
     display: flex; gap: 2rem;
-    max-width: 800px;
+    width: min(100%, 800px);
     align-items: center; justify-content: center;
     margin: 1rem 0; padding: 1rem;
     border: var(--border-type); border-radius: var(--radius-pill);
 }
 
-.part1 {
+.proj-lhs {
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
 }
 
-.part1 img { border-radius: var(--radius-pill); }
+.proj-lhs img { border-radius: var(--radius-pill); }
 
 .info-sec {
     margin-top: 0.5rem;
     display: flex; gap: 1rem;
     align-items: center; justify-content: center;
+}
+
+.info-sec a {
+    padding: 2px;
+    display: flex; justify-self: center;
+    border: var(--border-type); border-radius: var(--radius-pill);
 }
 
 .info-sec p {
@@ -34,12 +40,12 @@
     border-radius: var(--radius-pill);
 }
 
-.part2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
+.proj-rhs {
+    display: flex; flex-direction: column;
+    align-items: center; flex: 1;
 }
+
+.proj-rhs p { font-size: 0.9rem; line-height: 1.3rem; }
 
 .navigators {
     margin: 0 0.5rem;
@@ -80,4 +86,27 @@
     background-color: var(--btn-color-hover);
     transform: scale(1.05);
     cursor: pointer;
+}
+/* tablet + small laptop */
+@media (max-width: 850px) {
+    .proj-card {
+        flex-direction: column;
+        text-align: left;
+        gap: 1.25rem;
+    }
+
+    .proj-lhs {
+        align-items: center;
+    }
+
+    .proj-lhs img {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+    }
+
+    .proj-rhs {
+        width: 100%;
+        align-items: flex-start;
+    }
 }

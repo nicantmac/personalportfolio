@@ -18,14 +18,14 @@ function Projects() {
         <section id="projects" className="projects-container">
             <h1>Projects</h1>
             <div className="proj-card">
-                <div className="part1">
+                <div className="proj-lhs">
                     <img height="256px" width="400px" src={cardData[index].image} alt={cardData[index].title}/>
                     <div className="info-sec">
                         <a href={cardData[index].link} target="_blank"><img src={gitIcon} alt="Github Icon"/></a>
                         <p>{cardData[index].status}</p>
                     </div>
                 </div>
-                <div className="part2">
+                <div className="proj-rhs">
                     <h2>{cardData[index].title}</h2>
                     <p>{cardData[index].desc}</p>
                 </div>

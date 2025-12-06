@@ -1,7 +1,7 @@
 const cardData = [
     {
         title: "LearnFlip",
-        image: "/src/assets/learnflip-preview.png",
+        image: "/imgs/learnflip-preview.png",
         status: "Continuous Development",
         link: "https://github.com/nicantmac",
         desc: "LearnFlip is an interactive learning platform with modern designed to " +
