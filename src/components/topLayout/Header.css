@@ -1,12 +1,12 @@
 /* header */
 .header-container {
-    padding: 0.7rem 1rem; width: 85%;
-    margin-top: 1.5rem;
+    width: min(100% - 5rem, 950px);
+    margin-top: 1.5rem; padding: 0.7rem 1rem;
     margin-left: auto; margin-right: auto; /* centers element */
     position: fixed; top: 0; left: 0; right: 0;
     display: flex; justify-content: space-between; align-items: center;
     backdrop-filter: blur(8px); border: var(--border-type); border-radius: 50px;
-    z-index: 300; max-width: 950px;
+    z-index: 300;
 }
 
 /* Left Side btns: (ui theme) & (language) */
@@ -76,11 +76,24 @@ ul {
 .lang-item button:hover { background-color: var(--btn-color-hover); transform: scale(1.04); }
 .lang-item button:active { background-color: rgba(224, 224, 231, 0.45); transform: scale(0.975); }
 
-@media (width < 430px) {
-    .navbar-container {
-        padding: 0.5rem 1rem;
-        border-radius: 1px;
-        justify-content: center;
+@media (width < 450px) {
+    /* breaks down header design from desktops -> mobile */
+    .header-container {
+        flex-direction: column-reverse; gap: 0.5rem;
+        border: none; backdrop-filter: none;
+    }
+    /* smaller btns pushed to left */
+    .nav-lhs { display: flex; align-self: flex-start; }
+
+    /* adjust nav list for mobile */
+    nav { top: 100%; left: 3px; }
+
+    /* holds visual hierarchy by keeping border & blur */
+    .nav-rhs {
+        width: calc(100vw - 4rem);
+        justify-content: space-between;
+        padding: 0.5rem; backdrop-filter: blur(8px);
+        border: var(--border-type); border-radius: 20px;
     }
     .nav-rhs button { margin: 0.35rem; }
 }

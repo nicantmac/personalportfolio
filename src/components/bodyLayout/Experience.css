@@ -1,8 +1,7 @@
-
+/* entire xp container */
 .work-container {
-    margin: var(--space-md);
-    color: var(--text-color);
-    font-family: var(--base-font), sans-serif;
+    padding-inline: clamp(1.25rem, 5vw, 6rem);
+    color: var(--text-color); font-family: var(--base-font), sans-serif;
     background-color: var(--default-bg-color);
 }
 
@@ -12,19 +11,14 @@
 }
 
 .work-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    margin-top: 3rem; gap: 2rem;
 }
 
 .job {
-    max-width: 850px;
-    padding: 1.25rem 1.75rem;
-    border: var(--border-type);
-    border-radius: var(--radius-pill);
+    padding: 1.25rem 1.75rem; max-width: 850px;
+    border: var(--border-type); border-radius: var(--radius-pill);
 }
 
 .card-heading {
@@ -47,14 +41,12 @@
 .job li { list-style-type: disc; list-style-position: inside; }
 
 .tools-used {
-    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    display: flex; flex-wrap: wrap;
     align-items: center; justify-content: flex-start;
 }
 
 .tools-used li {
-    list-style-type: none;
-    font-size: 0.8rem;
-    padding: 3px 10px;
-    border: var(--border-type);
-    border-radius: var(--radius-pill);
+    margin: 0.2rem 0.3rem; padding: 3px 10px;
+    font-size: 0.8rem; list-style-type: none;
+    border: var(--border-type); border-radius: var(--radius-pill);
 }

@@ -1,7 +1,7 @@
 /* outer container */
 .about-container {
     /*margin: var(--space-md);*/
-    padding-inline: clamp(1.25rem, 5vw, 6rem); /* left + right */
+    padding-inline: clamp(1.5rem, 8vw, 8rem); /* left + right */
     background-color: var(--default-bg-color);
 }
 
@@ -10,12 +10,12 @@
 
 /* about title */
 .about-title {
-    font-size: 3rem; font-family: var(--base-font), sans-serif;
-    position: relative; top: 30px;
-    line-height: 1.1;
+    margin-bottom: 25px;
+    position: relative; top: 30px; line-height: 1.1;
+    font-size: clamp(2.25rem, 3.75vw, 5rem); font-family: var(--base-font), sans-serif;
 }
 
-.note { margin-top: 10px; }
+.note { margin-top: 30px; }
 .note a { color: var(--text-color); }
 
 /* initial features normal text */
@@ -87,7 +87,7 @@
 
 /* each section of full-stack tools */
 .stack-struct {
-    display: grid; gap: 3rem 4rem;
+    display: grid; gap: 3rem 2rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -107,6 +107,7 @@
     display: inline-block;
     margin: 0.35rem; padding: 0.4rem 0.7rem;
     border-radius: 50px; border: var(--border-type);
+    white-space: nowrap;
     font-size: clamp(0.7rem, 0.8rem + 0.185vw, 1.1rem);
     transition: all 0.2s ease-in-out;
 }
