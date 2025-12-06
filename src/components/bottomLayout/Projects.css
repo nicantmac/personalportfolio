@@ -45,6 +45,7 @@
     align-items: center; flex: 1;
 }
 
+.proj-rhs h2 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0;  }
 .proj-rhs p { font-size: 0.9rem; line-height: 1.3rem; }
 
 .navigators {
