@@ -84,7 +84,8 @@ ul {
         border: none; backdrop-filter: none;
     }
     /* smaller btns pushed to left */
-    .nav-lhs { display: flex; align-self: flex-start; }
+    .nav-lhs { display: flex; align-self: flex-start; margin-left: -0.8rem; }
+    .nav-lhs button { background-color: transparent; backdrop-filter: blur(8px);}
 
     /* adjust nav list for mobile */
     nav { top: 100%; left: 3px; }
