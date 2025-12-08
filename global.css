@@ -16,3 +16,18 @@ html { scroll-behavior: smooth; }
     --btn-color-hover: rgba(241, 241, 245, 0.45);
 }
 
+:root.dark {
+    /* background */
+    --default-bg-color: #242436;
+
+    /* text*/
+    --text-color: #ececec;
+
+    /* color */
+    --btn-color: #1a1a1e;
+    --btn-color-hover: rgb(43, 43, 66);
+    --shadow-subtle: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+body { background-color: var(--default-bg-color); }
+

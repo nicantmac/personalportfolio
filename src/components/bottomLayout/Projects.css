@@ -29,13 +29,18 @@
 }
 
 .info-sec a {
-    padding: 2px;
+    padding: 2px 3px; color: var(--text-color);
     display: flex; justify-self: center;
-    border: var(--border-type); border-radius: var(--radius-pill);
+    border: var(--border-type); border-radius: 25px;
+}
+
+.info-sec a svg {
+    position: relative; bottom: 1px;
+    width: 1.5rem; height: 1.5rem; padding-bottom: 3px;
 }
 
 .info-sec p {
-    padding: 0.3rem 0.75rem;
+    padding: 0.5rem 0.75rem;
     border: var(--border-type);
     border-radius: var(--radius-pill);
 }
@@ -48,11 +53,7 @@
 .proj-rhs h2 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0;  }
 .proj-rhs p { font-size: 0.9rem; line-height: 1.3rem; }
 
-.navigators {
-    margin: 0 0.5rem;
-    display: flex; gap: 3rem;
-}
-
+.navigators { margin: 0 0.5rem; display: flex; gap: 3rem; }
 .navigators button { font-family: var(--base-font), sans-serif; }
 
 .btn-nav {
@@ -62,8 +63,9 @@
 
 .btn-handle {
     padding: 0 0.75rem;
+    color: var(--text-color);
     background-color: transparent;
-    border: var(--border-type);border-radius: var(--radius-pill);
+    border: var(--border-type); border-radius: var(--radius-pill);
     cursor: pointer; transition: all 0.3s ease;
 }
 

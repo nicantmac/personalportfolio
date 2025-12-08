@@ -69,14 +69,38 @@
 
 /* sets flex layout for school logo & name */
 .label { display: flex; place-items: center; gap: 1rem; }
-
-.stat p { white-space: nowrap; }
+.label img { border-radius: 8px; border: 3px solid white; }
 
 /* applies specific spacing to 3rd span */
 .school span:nth-child(3) p { margin: 0 0 0.7rem;}
 
+/* attending indicator */
+.stat {
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: space-around;
+    border: var(--border-type); border-radius: 50px; background-color: transparent;
+    width: 11rem; height: 2rem; padding: 0 0.5rem;
+}
+
+/* blinking light */
+.blinker {
+    width: 1rem; height: 1rem;
+    background-color: limegreen; border: none; border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+.stat p { font-size: 0.85rem; white-space: nowrap; }
+
+/* blinking light */
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 1; }
+    50% { transform: scale(0.9); opacity: 0.5; }
+    100% { transform: scale(0.8); opacity: 1; }
+}
+
 /* tech stack section */
 .stack { margin-top: 6rem; }
+.stack svg { width: 30px; height: 30px; }
 
 /* stack title */
 .stack span {
@@ -113,29 +137,6 @@
 
 .stack-group ul li:hover { background: var(--btn-color-hover); transform: translateY(-2px) rotate(-2deg); }
 
-/* attending indicator */
-.stat {
-    display: flex; flex-direction: row;
-    align-items: center; justify-content: space-between;
-    border: none; border-radius: 50px; background-color: #f0f0f0;
-    width: 11rem; height: 2rem; padding: 0 0.75rem;
-}
-
-/* blinking light */
-.blinker {
-    width: 1rem; height: 1rem;
-    background-color: limegreen; border: none; border-radius: 50%;
-    animation: pulse 1s infinite;
-}
-
-.stat p { font-size: 0.85rem; }
-
-/* blinking light */
-@keyframes pulse {
-    0% { transform: scale(0.8); opacity: 1; }
-    50% { transform: scale(0.9); opacity: 0.5; }
-    100% { transform: scale(0.8); opacity: 1; }
-}
 
 @media (width < 750px) {
     .stack { grid-template-columns: 1fr; gap: 2rem; }
