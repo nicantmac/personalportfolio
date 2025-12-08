@@ -24,9 +24,9 @@ function Footer() {
                 <div className="social-links">
                     <h3>Socials</h3>
                     <div className="linkers">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="mailto:youremail@example.com">Email</a>
+                        <a href="https://github.com/nicantmac" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/nicholasmack972" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="mailto:nam7nam14@gmail.com">Email</a>
                     </div>
                 </div>
             </main>
