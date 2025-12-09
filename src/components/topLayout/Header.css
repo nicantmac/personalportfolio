@@ -63,13 +63,13 @@ ul {
 
 .lang-item img {
     border-radius: var(--radius-pill); border: var(--border-type);
-    margin-bottom: 0.35rem;
+    width: 1.2rem; height: 1.2rem; margin: 0.2rem auto;
 }
 
 .lang-item button {
     /* Sets flex-layout and aligns on x/y-axis */
     display: flex; align-items: center; justify-content: center;
-    width: 100%; gap: 0.6rem; padding: 0.3rem 0.5rem;
+    width: 100%; gap: 0.5rem; padding: 0.3rem 0.5rem;
     border: var(--border-type); border-radius: 13px; background-color: transparent;
     font-family: inherit;
     transition: all 0.2s ease-in-out;
@@ -78,6 +78,7 @@ ul {
 .lang-item button:hover { background-color: var(--btn-color-hover); transform: scale(1.04); }
 .lang-item button:active { background-color: rgba(224, 224, 231, 0.45); transform: scale(0.975); }
 
+/* breakpoint for mobile */
 @media (width < 450px) {
     /* breaks down header design from desktops -> mobile */
     .header-container {
