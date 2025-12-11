@@ -11,7 +11,7 @@ const cardData = [
     },
     {
         title: "AI-Powered Front Door Cam",
-        image: "",
+        image: "/imgs/home-security.png",
         status: "Continuous Development",
         link: "https://github.com/nicantmac",
         desc: "AI-powered front door camera using a Raspberry Pi Module 4 and Google Coral USB Edge TPU " +
