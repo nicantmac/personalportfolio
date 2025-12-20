@@ -3,8 +3,8 @@ import "./aboutMe.css";
 function AboutMe() {
 
     const spareTime = [
+        { activity: "crocheting" }, { activity: "playing piano" }, { activity: "fishing"},
         { activity: "roller skating" }, { activity: "watching YouTube while eating" },
-        { activity: "crocheting" }, { activity: "playing piano" },
         { activity: "learning French & American Sign Language" }, { activity: "long walks & sightseeing" },
         { activity: "late night joyrides" }, { activity: "Clash of clans" }, { activity: "embedded system stuff" }
     ];
