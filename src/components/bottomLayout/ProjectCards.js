@@ -1,15 +1,5 @@
 const cardData = [
     {
-        title: "LearnFlip",
-        image: "/imgs/learnflip-preview.png",
-        status: "Continuous Development",
-        link: "https://github.com/nicantmac",
-        desc: "LearnFlip is an interactive learning platform with modern designed to " +
-            "promising learning to be comprehensive and welcoming to all knowledge background. " +
-            "Help student learners master STEM and technical subjects through dynamic card-based learning." +
-            " Inspired by the simplicity of Quizlet and the interactivity of Brilliant.org"
-    },
-    {
         title: "AI-Powered Front Door Cam",
         image: "/imgs/home-security.png",
         status: "Continuous Development",
