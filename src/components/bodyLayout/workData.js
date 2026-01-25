@@ -1,5 +1,21 @@
 export const workItems = [
     {
+        id: "learnflip",
+        logo: "",
+        org: "LearnFlip",
+        role: "Developer",
+        date: "September 2025 - Present",
+        tools: ["Typescript", "React.js", "Framer Motion", "Figma", "Web Accessibility", " Express.js", "JWT", "Supabase", "Docker"],
+        listing: [
+            "React.js learning platform to help students learn 100+ STEM topics via flashcards & fill-in blanks.",
+            "Uses Open Trivia API to dynamically load question sets by topic and difficulty.",
+            "Ensuring responsive UX/UI with Framer Motion and Web Accessibility.",
+            "Developed an Express.js backend with secure RESTful API routes, and session " +
+            "handling using JWT tokens and using Supabase Auth & data management features.",
+            "Using Docker to package the full-stack system in a container and using AWS EC2 to decide where and how the container runs.",
+        ]
+    },
+    {
         id: "doj",
         logo: "/orgs/doj_emblem.webp",
         org: "U.S. Department of Justice",
