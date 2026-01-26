@@ -1,6 +1,7 @@
 import "./aboutMe.css";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 
 function AboutMe() {
     const bioRef = useRef(null);
@@ -131,6 +132,26 @@ function AboutMe() {
         { title: "Tools", items: ["Git", "GitHub", "Jenkins", "Postman", "Chrome DevTools", "WCAG/A11Y", "Figma", "Material UI"] }
     ];
 
+    const section = {
+        hidden: {},
+        show: { transition: { staggerChildren: 0.12 } },
+    };
+
+    const group = {
+        hidden: { opacity: 0, y: 18 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+    };
+
+    const pills = {
+        hidden: {},
+        show: { transition: { staggerChildren: 0.05, delayChildren: 0.12 } },
+    };
+
+    const pill = {
+        hidden: { opacity: 0, y: 10, scale: 0.98 },
+        show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.35, ease: "easeOut" } },
+    };
+
     return (
         <section id="about" className="about-container">
             <div className="inner-container">
@@ -163,46 +184,57 @@ function AboutMe() {
                     </div>
                 </div>
 
-                <div className="school">
-                    <span className="stat">
-                        <span className="blinker"></span>
-                        <p>Currently Attending</p>
-                    </span>
-                    <span className="label">
-                        <img height="35px" width="35px" src="/orgs/umbc.webp" alt="school logo"/>
-                        <p>University of Maryland Baltimore County</p>
-                    </span>
-                    <span>
-                        <p><strong>B.S.</strong> in Information Systems<strong> Specialized:</strong> Human-Centered Computing — <i>Expected 2026</i></p>
-                        <p><strong>Relevant coursework:</strong> Databases, UX Design & Research, Web Development, Data Structures</p>
-                    </span>
-                </div>
+                <AnimatePresence>
+                    <Motion.div className="school"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                viewport={{ once: true, amount: 0.35 }}
+                    >
+                        <span className="stat">
+                            <span className="blinker"></span>
+                            <p>Currently Attending</p>
+                        </span>
+                            <span className="label">
+                            <img height="35px" width="35px" src="/orgs/umbc.webp" alt="school logo"/>
+                            <p>University of Maryland Baltimore County</p>
+                        </span>
+                            <span>
+                            <p><strong>B.S.</strong> in Information Systems<strong> Specialized:</strong> Human-Centered Computing — <i>Expected 2026</i></p>
+                            <p><strong>Relevant coursework:</strong> Databases, UX Design & Research, Web Development, Data Structures</p>
+                        </span>
+                    </Motion.div>
+                </AnimatePresence>
 
-                <div className="stack">
-                    <span>
+                <Motion.div className="stack"
+                        variants={section}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true, amount: 0.25 }}
+                >
+                    <Motion.span variants={group}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                              stroke="currentColor" className="size-6">
                           <path strokeLinecap="round" strokeLinejoin="round"
                                 d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"/>
                         </svg>
-
                         <h3>My tech stack</h3>
-                    </span>
+                    </Motion.span>
 
                     <div className="stack-struct">
                         {stackItems.map((item, index) => (
-                            <div key={index} className="stack-group">
+                            <Motion.div key={index} className="stack-group" variants={group}>
                                 <h3>{item.title}</h3>
-                                <ul>
+                                <Motion.ul variants={pills} initial="hidden" animate="show">
                                     {item.items.map((tool, i) => (
-                                        <li key={i}>{tool}</li>
+                                        <Motion.li key={i} variants={pill}>{tool}</Motion.li>
                                     ))}
-                                </ul>
-                            </div>
+                                </Motion.ul>
+                            </Motion.div>
                             )
                         )}
                     </div>
-                </div>
+                </Motion.div>
             </div>
         </section>
     );

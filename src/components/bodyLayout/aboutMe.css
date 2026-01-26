@@ -135,7 +135,7 @@
 
 /* each section of full-stack tools */
 .stack-struct {
-    display: grid; gap: 3rem 2rem;
+    display: grid; gap: 1rem 2rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
