@@ -12,7 +12,7 @@
     width: min(100%, 800px);
     align-items: center; justify-content: center;
     margin: 1rem 0; padding: 1.2rem;
-    border: var(--border-type); border-radius: var(--radius-pill);
+    border: var(--base-border); border-radius: var(--radius-pill);
 }
 
 .proj-lhs {
@@ -31,7 +31,7 @@
 .info-sec a {
     padding: 2px 3px; color: var(--text-color);
     display: flex; justify-self: center;
-    border: var(--border-type); border-radius: 25px;
+    border: var(--base-border);  border-radius: 25px;
 }
 
 .info-sec a svg {
@@ -41,7 +41,7 @@
 
 .info-sec p {
     padding: 0.5rem 0.75rem;
-    border: var(--border-type);
+    border: var(--base-border);
     border-radius: var(--radius-pill);
 }
 
@@ -65,7 +65,7 @@
     padding: 0 0.75rem;
     color: var(--text-color);
     background-color: transparent;
-    border: var(--border-type); border-radius: var(--radius-pill);
+    border: var(--base-border);  border-radius: var(--radius-pill);
     cursor: pointer; transition: all 0.3s ease;
 }
 
