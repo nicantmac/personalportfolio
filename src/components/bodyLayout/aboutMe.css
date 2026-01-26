@@ -1,6 +1,6 @@
 /* outer container */
 .about-container {
-    padding-inline: clamp(1.5rem, 8vw, 8rem); /* left + right */
+    padding-inline: clamp(1.5rem, 8vw, 7rem); /* left + right */
     background-color: var(--default-bg-color);
 }
 
@@ -20,22 +20,44 @@
 /* initial features normal text */
 .bio-desc p {
     margin: 5rem 0 0;
-    letter-spacing: 1px; color: var(--text-color);
+    letter-spacing: 1px;
+    color: inherit;
     font-size: clamp(1rem, 4vw + 0.5rem, 2.5rem);
-    transition: color 0.3s ease-in-out;
 }
 
-/* initial features of special text */
-.bio-desc p span {
+/* gsap words */
+.bio-desc p .word {
     color: var(--text-color);
     transition: color 0.3s ease-in-out;
 }
 
-/* features for normal text on hover */
-.bio-desc p:hover { color: rgba(0, 0, 0, 0.14); }
+/* highlighted phrase */
+.bio-desc p .accent-txt {
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
 
-/* on hover special text stays visible */
-.bio-desc p:hover span { color: var(--text-color); }
+/* dim everything */
+.bio-desc:hover p .word {
+    color: rgba(0, 0, 0, 0.14);
+}
+
+/* BUT keep words inside accent normal */
+.bio-desc:hover p .accent-txt .word {
+    color: var(--text-color);
+}
+
+
+/*!* features for normal text on hover *!*/
+/*.bio-desc p:hover { color: rgba(0, 0, 0, 0.14); }*/
+
+/*!* on hover special text stays visible *!*/
+/*.bio-desc p:hover span { color: var(--text-color); }*/
+
+.bio-desc .word {
+    display: inline-block;
+    will-change: transform, opacity;
+}
 
 /* section for spare time activities */
 .spare-time {
@@ -55,7 +77,10 @@
     display: inline-block; /* to fit the items according to width */
     margin: 0.5rem; padding: 0.35rem 0.75rem;
     font-size: 0.85rem; white-space: nowrap;
-    border: var(--border-type); border-radius: var(--radius-pill);
+    border: var(--base-border); border-radius: var(--radius-pill);
+}
+.spare-item {
+    will-change: transform, opacity;
 }
 
 /* school section */
@@ -64,7 +89,7 @@
     display: flex; flex-direction: column;
     margin: 4rem 0; gap: 0.75rem; max-width: 750px;
     padding: 1.2rem 1.3rem 0.75rem;
-    border: var(--border-type); border-radius: 25px;
+    border: var(--base-border); border-radius: 25px;
 }
 
 /* sets flex layout for school logo & name */
@@ -78,7 +103,7 @@
 .stat {
     display: flex; flex-direction: row;
     align-items: center; justify-content: space-around;
-    border: var(--border-type); border-radius: 50px; background-color: transparent;
+    border: var(--base-border); border-radius: 50px; background-color: transparent;
     width: 11rem; height: 2rem; padding: 0 0.5rem;
 }
 
@@ -129,7 +154,7 @@
 .stack-group ul li {
     display: inline-block;
     margin: 0.35rem; padding: 0.4rem 0.7rem;
-    border-radius: 50px; border: var(--border-type);
+    border-radius: 50px; border: var(--base-border);
     white-space: nowrap;
     font-size: clamp(0.7rem, 0.8rem + 0.185vw, 1.1rem);
     transition: all 0.2s ease-in-out;

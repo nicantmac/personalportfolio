@@ -1,6 +1,5 @@
 /* entire content of hero section */
 .hero-container {
-    /* grid layout and minimal height is full-page height */
     display: grid; min-height: 100vh;
     place-items: center; /* shorthand for align-items & justify-content */
     overflow: hidden; position: relative; padding: 1rem;
@@ -16,17 +15,17 @@
     color: var(--text-color);
 }
 
-.hero-intro { margin: 0; font-size: clamp(3rem, 8vw, 5rem); font-weight: inherit; }
+.hero-intro { margin: 0; font-size: clamp(3rem, 8vw, 6.3rem); font-weight: inherit; }
 
 .hero-name {
     /* spacing around and between letters for "I am Nick" */
     margin: 0.15rem 0 1rem; letter-spacing: 0.06em;
-    font-size: clamp(2.6rem, 7vw, 5rem);
+    font-size: clamp(2.6rem, 7.8vw, 7rem);
     font-weight: inherit;
 }
 
 /* Spacing and readable font sizing for subtitle -> "Aspiring..." */
-.hero-subtitle { margin: 0 1rem; font-size: clamp(1.2rem, 4.2vw, 2rem); }
+.hero-subtitle { margin: 0 1rem; font-size: clamp(1.2rem, 4.2vw, 3rem); }
 
 /* wave animation target inside .hero-intro */
 .hero-intro .wave {
@@ -49,9 +48,7 @@
 }
 
 .hero-btns {
-    /* Sets flex-layout and flex-wrap for any potential overlapping */
     display: flex; flex-wrap: wrap;
-    /* Spacing around and in-between buttons, centers horizontally */
     margin: 1.2rem 0; gap: 0.75rem; justify-content: center;
 }
 
@@ -59,13 +56,17 @@
 .talk-btn, .explore-btn {
     display: inline-flex; padding: 0.5rem 1rem; align-items: center;
     gap: 0.5rem; height: auto; width: auto;
-    color: var(--text-color); font-size: 0.85rem;
+    color: var(--text-color); font-size: 1rem;
     font-weight: lighter; font-family: var(--base-font), sans-serif;
-    background-color: transparent; border-radius: 50px; border: var(--border-type); cursor: pointer;
+    background-color: transparent; border-radius: 50px; border: var(--base-border); cursor: pointer;
     text-decoration: none; transition: all 0.2s ease-in-out;
 }
 
-.talk-btn:hover, .explore-btn:hover { background-color: var(--btn-color-hover); transform: translateY(-2px); }
+.talk-btn:hover, .explore-btn:hover {
+    border-color: transparent;
+    background-color: var(--base-bg-color);
+    transform: translateY(-2px);
+}
 
 /* normalize inline icon sizes (override huge rems) */
 .talk-btn img, .explore-btn img { display: inline-block; width: 18px; height: 18px; }

@@ -1,6 +1,119 @@
 import "./aboutMe.css";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 function AboutMe() {
+    const bioRef = useRef(null);
+    const spareRef = useRef(null);
+
+
+    useEffect(() => {
+        const root = bioRef.current;
+        if (!root) return;
+
+        const p = root.querySelector("p");
+        if (!p) return;
+
+        const originalHTML = p.innerHTML;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) return;
+                observer.disconnect(); // play once
+
+                // Split by words BUT preserve inline tags like <span> and <sup>
+                // We wrap only text nodes, leaving tags intact.
+                const wrapTextNodesIntoWords = (node) => {
+                    const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null);
+                    const textNodes = [];
+                    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+                    textNodes.forEach((textNode) => {
+                        const text = textNode.nodeValue;
+                        if (!text || !text.trim()) return;
+
+                        const frag = document.createDocumentFragment();
+                        // keep whitespace as separate tokens
+                        const tokens = text.split(/(\s+)/);
+
+                        tokens.forEach((tok) => {
+                            if (!tok) return;
+                            if (/^\s+$/.test(tok)) {
+                                frag.appendChild(document.createTextNode(tok));
+                            } else {
+                                const span = document.createElement("span");
+                                span.className = "word";
+                                span.textContent = tok;
+                                frag.appendChild(span);
+                            }
+                        });
+
+                        textNode.parentNode.replaceChild(frag, textNode);
+                    });
+                };
+
+                wrapTextNodesIntoWords(p);
+
+                gsap.fromTo(
+                    p.querySelectorAll(".word"),
+                    { opacity: 0, y: 14 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.55,
+                        ease: "power3.out",
+                        stagger: 0.03,
+                    }
+                );
+            },
+            { threshold: 0.35 }
+        );
+
+        observer.observe(root);
+
+        return () => {
+            observer.disconnect();
+            // optional restore if component unmounts
+            p.innerHTML = originalHTML;
+        };
+    }, []);
+
+    useEffect(() => {
+        const root = spareRef.current;
+        if (!root) return;
+
+        const heading = root.querySelector("h3");
+        const items = root.querySelectorAll(".spare-item");
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) return;
+                observer.disconnect(); // play once
+
+                const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+                tl.from(heading, {
+                    opacity: 0,
+                    y: 16,
+                    duration: 0.5,
+                }).from(
+                    items,
+                    {
+                        opacity: 0,
+                        y: 14,
+                        duration: 0.45,
+                        stagger: 0.08,
+                    },
+                    "-=0.25"
+                );
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(root);
+        return () => observer.disconnect();
+    }, []);
+
 
     const spareTime = [
         { activity: "crocheting" }, { activity: "playing piano" }, { activity: "fishing"},
@@ -22,21 +135,23 @@ function AboutMe() {
         <section id="about" className="about-container">
             <div className="inner-container">
 
-                <h1 className="about-title">About Me</h1>
+                <h1 className="about-title">
+                    About Me
+                </h1>
                 <p className="note">Wanna skip to professional stuff? Checkout the <a href="#work"> Work</a> I've done.</p>
 
                 <div className="bio">
-                    <div className="bio-desc">
+                    <div className="bio-desc" ref={bioRef}>
                         <p><strong>
-                            <span>I’m an enthusiastic Full-Stack developer</span> based in Washington, DC with
-                            2<sup>1/2</sup> years of growing experience across <span>frontend & backend development,
-                        database design, and UI/UX research</span>. I enjoy building & design
+                            <span className="accent-txt">I’m an enthusiastic Full-Stack developer
+                            </span> based in Washington, DC with 2<sup>1/2</sup>
+                            years of growing experience across <span className="accent-txt">frontend & backend
+                            development, database design, and UI/UX research</span>. I enjoy building & design
                             user interfaces to improve experiences amongst all. In addition, just started
                             exploring how AI can enhance my building.
-                        </strong>
-                        </p>
+                        </strong></p>
                     </div>
-                    <div className="spare-time">
+                    <div className="spare-time" ref={spareRef}>
                         <h3>Spare time stuff...</h3>
                         <ul>
                             {spareTime.map((item, index) => (
