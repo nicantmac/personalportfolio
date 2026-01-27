@@ -5,13 +5,15 @@
     background-color: var(--default-bg-color);
 }
 
-.projects-container h1 { margin: 0; text-align: center; font-size: 3rem; line-height: 1.15; }
-
+.projects-container h1 { margin-bottom: 2rem; text-align: center; font-size: 3rem; line-height: 1.15; }
+.proj-sect {
+    display: flex; flex-direction: column;
+}
 .proj-card {
     display: flex; gap: 2.5rem;
-    width: min(100%, 800px);
-    align-items: center; justify-content: center;
-    margin: 1rem 0; padding: 1.2rem;
+    max-width: 700px;
+    align-items: center;
+    margin: 1rem auto; padding: 1.5rem;
     border: var(--base-border); border-radius: 45px;
     box-shadow: 3px 3px 15px #b2b2b2;
 }
@@ -48,13 +50,13 @@
 
 .proj-rhs {
     display: flex; flex-direction: column;
-    align-items: center; flex: 1;
+    align-items: center;
 }
 
-.proj-rhs h2 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0;  }
+.proj-rhs h2 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0; }
 .proj-rhs p { font-size: 0.9rem; line-height: 1.3rem; }
 
-.navigators { margin: 0 0.5rem; display: flex; gap: 3rem; }
+.navigators { margin: 0 auto 0 auto; display: flex; gap: 3rem; }
 .navigators button { font-family: var(--base-font), sans-serif; }
 
 .btn-nav {
@@ -87,5 +89,9 @@
         height: auto;
         width: 100%; max-width: 360px;
     }
-    .proj-rhs { width: 100%; align-items: flex-start; }
+    .proj-rhs { margin: 0 1rem; align-items: flex-start; }
+}
+
+@media (max-width: 500px) {
+    .proj-sect { flex-direction: column-reverse; }
 }
