@@ -93,7 +93,6 @@
 
 }
 
-
 /* screen breakpoint for mobile devices */
 @media (width < 640px) {
     .hero-subtitle { white-space: nowrap; }
