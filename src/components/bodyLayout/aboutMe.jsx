@@ -225,9 +225,9 @@ function AboutMe() {
                         {stackItems.map((item, index) => (
                             <Motion.div key={index} className="stack-group" variants={group}>
                                 <h3>{item.title}</h3>
-                                <Motion.ul variants={pills} initial="hidden" animate="show">
+                                <Motion.ul className="stack-ul" variants={pills} initial="hidden" animate="show">
                                     {item.items.map((tool, i) => (
-                                        <Motion.li key={i} variants={pill}>{tool}</Motion.li>
+                                        <Motion.li className="stack-li" key={i} variants={pill}>{tool}</Motion.li>
                                     ))}
                                 </Motion.ul>
                             </Motion.div>

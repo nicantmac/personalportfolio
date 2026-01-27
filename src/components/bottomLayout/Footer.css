@@ -1,11 +1,11 @@
 /* entire footer container */
 .footer-container {
-    display: flex; flex-direction: column;
-    margin: 10rem 1.5rem 1rem; padding-top: 1rem;
     text-align: center;
+    display: flex; flex-direction: column;
+    margin: 8rem 1.5rem 1rem; padding-top: 1rem;
     color: var(--text-color); font-family: var(--base-font), sans-serif;
     background-color: var(--default-bg-color);
-    border: var(--border-type); border-radius: 25px;
+    border: var(--base-border); border-radius: var(--radius-pill);
 }
 
 /* heading */
@@ -46,7 +46,7 @@
 
 .footer-note {
     margin-top: 2rem; padding-top: 0.5rem;
-    border-top: var(--border-type);
+    border-top: var(--base-border);
     font-size: 0.8rem; opacity: 0.7;
 }
 

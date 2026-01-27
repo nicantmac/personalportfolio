@@ -11,7 +11,7 @@ const cardData = [
     },
     {
         title: "ImagineAI",
-        image: "",
+        image: "/imgs/flower-datasetImg.png",
         status: "Completed",
         link: "https://github.com/nicantmac",
         desc: "CNN model classifies 700+ images across multiple flower species. " +
@@ -42,7 +42,7 @@ const cardData = [
     {
         title: "ResumeLens - AI Resume Analyzer",
         image: "/imgs/resume-lens.png",
-        status: "In Development",
+        status: "In-Progress",
         github: "https://github.com/nicantmac",
         // demo: "https://resumelens.netlify.app",
         tags: ["React", "Next.js", "OpenAI API", "PDF.js", "TypeScript"],
@@ -58,7 +58,7 @@ const cardData = [
         desc: "Web dashboard for monitoring Raspberry Pi smart home devices. Real-time camera feeds, motion detection logs, and object detection history. Extends existing door camera project with web interface. Demonstrates full-stack integration of hardware, backend (Python/Flask), and frontend (React)."
     },
     {
-        title: "SalaryLens - Tech Salary Transparency",
+        title: "SalaryLens",
         image: "/imgs/salary-lens.png",
         status: "In-progress",
         github: "https://github.com/nicantmac",

@@ -124,7 +124,7 @@
 }
 
 /* tech stack section */
-.stack { margin-top: 6rem; }
+.stack { margin: 4rem 0 0 2rem; }
 .stack svg { width: 30px; height: 30px; }
 
 /* stack title */
@@ -135,7 +135,7 @@
 
 /* each section of full-stack tools */
 .stack-struct {
-    display: grid; gap: 1rem 2rem;
+    display: grid; gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -144,14 +144,14 @@
     font-size: 1.6rem; color: var(--text-color);
 }
 
-.stack-group ul {
+.stack-ul {
     margin: 0; padding: 0;
     display: inline-block; flex-wrap: wrap;
     list-style: none;
 }
 
 /* each full-stack item */
-.stack-group ul li {
+.stack-li {
     display: inline-block;
     margin: 0.35rem; padding: 0.4rem 0.7rem;
     border-radius: 50px; border: var(--base-border);
@@ -160,8 +160,10 @@
     transition: all 0.2s ease-in-out;
 }
 
-.stack-group ul li:hover { background: var(--btn-color-hover); transform: translateY(-2px) rotate(-2deg); }
-
+.stack-li:hover {
+    background: var(--btn-color-hover);
+    transform: translate(-2px) rotate(-2deg); /* fix later, bug: transform won't work */
+}
 
 @media (width < 750px) {
     .stack { grid-template-columns: 1fr; gap: 2rem; }

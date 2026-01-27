@@ -9,10 +9,10 @@ html { scroll-behavior: smooth; }
     --text-color: #171746;
 
     /* shaping & color */
-    --radius-pill: 25px;
+    --radius-pill: 30px;
     --shadow-subtle: 0 8px 15px rgba(15, 23, 42, 0.15);
     --btn-color: #fbfbff;
-    --btn-color-hover: rgba(241, 241, 245, 0.45);
+    --btn-color-hover: rgba(241, 241, 245, 0.46);
 
     --base-border: 1px solid rgb(227, 227, 227);
     --base-bg-color: rgb(241, 241, 241);

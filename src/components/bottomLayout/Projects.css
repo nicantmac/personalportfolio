@@ -8,11 +8,12 @@
 .projects-container h1 { margin: 0; text-align: center; font-size: 3rem; line-height: 1.15; }
 
 .proj-card {
-    display: flex; gap: 2rem;
+    display: flex; gap: 2.5rem;
     width: min(100%, 800px);
     align-items: center; justify-content: center;
     margin: 1rem 0; padding: 1.2rem;
-    border: var(--base-border); border-radius: var(--radius-pill);
+    border: var(--base-border); border-radius: 45px;
+    box-shadow: 3px 3px 15px #b2b2b2;
 }
 
 .proj-lhs {
@@ -20,11 +21,11 @@
     align-items: center; justify-content: center;
 }
 
-.proj-lhs img { border-radius: var(--radius-pill); }
+.proj-lhs img { border-radius: var(--radius-pill); box-shadow: 3px 3px 15px #8f8f8f; }
 
 .info-sec {
     margin-top: 0.5rem;
-    display: flex; gap: 0.7rem;
+    display: flex; gap: 1rem;
     align-items: center; justify-content: center;
 }
 
