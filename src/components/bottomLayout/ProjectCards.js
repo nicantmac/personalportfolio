@@ -30,6 +30,16 @@ const cardData = [
             "construct a response of what possibly could the reason and potential improvements."
     },
     {
+        title: "PDFMerger",
+        image: "",
+        status: "Completed",
+        link: "https://github.com/nicantmac",
+        desc: "This is a Python-based tool built to quickly combine multiple files into one. " +
+            "This tool simply simplifies the transition from individual uploads to a single, scanned " +
+            "document, making it an ideal solution for what is desired. Interface designed intuitively and " +
+            "friendly to new and experienced users so file uploads are smooth for all."
+    },
+    {
         title: "ResumeLens - AI Resume Analyzer",
         image: "/imgs/resume-lens.png",
         status: "In Development",
