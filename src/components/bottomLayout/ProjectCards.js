@@ -21,6 +21,28 @@ const cardData = [
             "architecture design, and image recognition."
     },
     {
+        title: "PDFMerger",
+        image: "/imgs/pdfmerge.png",
+        status: "Completed",
+        link: "https://github.com/nicantmac",
+        desc: "This is a Python-based tool built to quickly combine multiple files into one. " +
+            "This tool simply simplifies the transition from individual uploads to a single, scanned " +
+            "document, making it an ideal solution for what is desired. Interface designed intuitively " +
+            "and friendly to new and experienced users so file uploads are smooth for all."
+    },
+    {
+        title: "IoTPort",
+        image: "/imgs/iot-hub.png",
+        status: "Completed",
+        github: "https://github.com/nicantmac",
+        // demo: null,
+        tags: ["React", "Python", "WebSocket", "Raspberry Pi", "Real-time Data"],
+        desc: "My Smart Home dashboard for monitoring Raspberry Pi smart home devices. " +
+            "Real-time camera feeds, motion detection logs, and object detection history. " +
+            "Extends existing door camera project with web interface. Demonstrates full-stack" +
+            " integration of hardware, backend (Python/Flask), and frontend (React)."
+    },
+    {
         title: "GhostGuarded",
         image: "",
         status: "In-progress",
@@ -30,16 +52,6 @@ const cardData = [
             "If ghosted, the system uses ML model to take corresponding data i.e. situation, company " +
             "details, your info etc to construct a response of what possibly could the reason and " +
             "potential improvements."
-    },
-    {
-        title: "PDFMerger",
-        image: "",
-        status: "Completed",
-        link: "https://github.com/nicantmac",
-        desc: "This is a Python-based tool built to quickly combine multiple files into one. " +
-            "This tool simply simplifies the transition from individual uploads to a single, scanned " +
-            "document, making it an ideal solution for what is desired. Interface designed intuitively " +
-            "and friendly to new and experienced users so file uploads are smooth for all."
     },
     {
         title: "ResumeLens",
@@ -53,18 +65,6 @@ const cardData = [
             "ATS compatibility issues. Provides actionable suggestions and before/after " +
             "comparisons using GPT-4. Built after applying to 500+ jobs to help others avoid " +
             "common resume mistakes."
-    },
-    {
-        title: "IoTPort",
-        image: "/imgs/iot-hub.png",
-        status: "Completed",
-        github: "https://github.com/nicantmac",
-        // demo: null,
-        tags: ["React", "Python", "WebSocket", "Raspberry Pi", "Real-time Data"],
-        desc: "My Smart Home dashboard for monitoring Raspberry Pi smart home devices. " +
-            "Real-time camera feeds, motion detection logs, and object detection history. " +
-            "Extends existing door camera project with web interface. Demonstrates full-stack" +
-            " integration of hardware, backend (Python/Flask), and frontend (React)."
     },
     {
         title: "SalaryLens",
