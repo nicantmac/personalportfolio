@@ -24,7 +24,7 @@ const cardData = [
         title: "PDFMerger",
         image: "/imgs/pdfmerge.png",
         status: "Completed",
-        link: "https://github.com/nicantmac",
+        link: "https://github.com/nicantmac/pdfmerger",
         desc: "This is a Python-based tool built to quickly combine multiple files into one. " +
             "This tool simply simplifies the transition from individual uploads to a single, scanned " +
             "document, making it an ideal solution for what is desired. Interface designed intuitively " +
